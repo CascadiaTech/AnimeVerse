@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 import { useNativeCurrencyBalances } from 'state/wallet/hooks'
 import styled from 'styled-components/macro'
 
-import CascadiaTech from '../../assets/images/CascadiaTech.png'
+import ANime from '../../assets/ANime.png'
 //import Menu from '../Menu' - this is the menu that includes uniswaps docs etc.
 import Row from '../Row'
 import Web3Status from '../Web3Status'
@@ -76,7 +76,7 @@ const HeaderLinks = styled(Row)`
   width: 100vw;
   max-width: 100vw;
   padding: 15px;
-  padding-left: 85px;
+  padding-left: 150px;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 100px;
@@ -186,7 +186,13 @@ export default function Header() {
     <>
       <HeaderFrame showBackground={false}>
         <UniIcon>
-          <img src={CascadiaTech} alt="logo" width="70px" height="70%"></img>
+          <img
+            src={ANime}
+            alt="logo"
+            width="120px"
+            height="75%"
+            style={{ paddingLeft: '20px', paddingTop: '10px' }}
+          ></img>
         </UniIcon>
         <HeaderLinks>
           <StyledNavLink id={'/Dashboard'} to={'/Dashboard'}>

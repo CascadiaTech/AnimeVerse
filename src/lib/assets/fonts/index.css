@@ -12,6 +12,10 @@
   src: local("Montserrat"), url(./fonts/montserrat/montserrat-regular.ttf) format("truetype")
 }
 @font-face {
+  font-family: "OpenDyslexic3-Regular";
+  src: local("OpenDyslexic3"), url(./fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf) format("truetype")
+}
+@font-face {
   font-family: "Inter";
   font-style: normal;
   font-display: block;
