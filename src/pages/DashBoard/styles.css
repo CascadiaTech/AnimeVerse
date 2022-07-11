@@ -506,9 +506,10 @@ transition: 1s;
       }
     }
     .video {
-      position: fixed;
+      position: absolute;
       left: 0px;
       min-width: 100%;
+      max-width: 100%;
       min-height: 100%;
       top: 0px;
       z-index: -10;

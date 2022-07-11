@@ -3,12 +3,12 @@ import 'animate.css'
 
 //const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 import useScrollPosition from '@react-hook/window-scroll'
+import newLogo from 'assets/newLogo.png'
+import video from 'assets/video.mp4'
 import React, { useEffect, useState } from 'react'
 import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 import styled from 'styled-components/macro'
-
-import CascadiaTechFrontPic from '../../assets/images/CascadiaTechFrontPic.png'
 
 //padding: 8px 35px;
 
@@ -56,15 +56,13 @@ const Headernew = () => {
   return (
     <>
       <div className={'mobileheader'}>
+        <video autoPlay loop muted playsInline className="video">
+          <source src={video} type="video/mp4" />
+        </video>{' '}
         <animated.div hidden={hidden} style={props} className={'animate__animated animate__bounce'}>
           <div className={'flexbox-container'}>
             <div style={{ justifyContent: 'right' }}>
-              <img
-                className={'header-image'}
-                src={CascadiaTechFrontPic}
-                alt="header"
-                style={{ maxWidth: '40vw' }}
-              ></img>
+              <img className={'header-image'} src={newLogo} alt="header" style={{ maxWidth: '40vw' }}></img>
             </div>
             <div style={{ marginTop: '80px' }} className="flexbox-vertical-container-left">
               <div className={'header-text'}>

@@ -2,7 +2,6 @@ import './styles.css'
 
 //import { SupportedChainId } from 'constants/chains'
 //import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import JpegBackground2 from '../../assets/videos/JpegBackground2.mp4'
 import { TransparentCard } from '../../components/Card'
 import Footer from './Footer'
 import Headernew from './Newheader'
@@ -20,9 +19,6 @@ export default function DashBoardComponent() {
       <Headernew></Headernew>
       <p className={'header-space'} style={{ paddingTop: '1px', marginTop: '1px', marginBottom: '1px' }}></p>
       <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
-      <video autoPlay loop muted playsInline className="video">
-        <source src={JpegBackground2} type="video/mp4" />
-      </video>{' '}
       <div style={{ justifyContent: 'center' }}>
         <StratSection></StratSection>
       </div>

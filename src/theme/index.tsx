@@ -210,7 +210,7 @@ export const ThemedText = {
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.text1};
-  background-color: none;
+  background-color: #4d0ac2;
 }
 a {
  color: ${({ theme }) => theme.blue1}; 
