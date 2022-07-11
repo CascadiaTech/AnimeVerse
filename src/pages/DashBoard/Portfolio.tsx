@@ -2,10 +2,6 @@ import 'animate.css'
 
 //const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 import useScrollPosition from '@react-hook/window-scroll'
-import DesignDevPic from 'assets/images/DesignDevPic.jpg'
-import ReactDevPic from 'assets/images/ReactDevPic.jpg'
-import SolidityDevPic from 'assets/images/SolidityDevPic.jpg'
-import { TransparentCard } from 'components/Card'
 import React, { useEffect, useState } from 'react'
 import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
@@ -48,106 +44,55 @@ export default function PortfolioSection() {
               paddingBottom: '5vh',
             }}
           >
-            Portfolio
+            Mission
           </h1>
-        </div>
-        <div className="portfolio">
           <p
+            className={'HoverText'}
             style={{
-              maxWidth: '1000px',
+              fontSize: 'calc(3 * (0.5vw + 0.5vh))',
               textAlign: 'center',
-              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-              fontSize: '15px',
-              lineHeight: '1.4',
-              justifySelf: 'end',
-              paddingBottom: '2vh',
+              maxWidth: '100vw',
+              color: '#ffffff',
+              paddingBottom: '5vh',
             }}
           >
-            <img
-              style={{ marginRight: '10px', paddingLeft: '20px' }}
-              className={'imgport1'}
-              src={ReactDevPic}
-              alt="remix"
-            />
-            <h1
-              className={'imgButton'}
-              onClick={() => window.open('https://kr.ncsoft.com/en/whoWeAre/about.do')}
-              style={{
-                textDecoration: 'underline solid 2px',
-                fontFamily: 'montserrat, sans-serif',
-                fontSize: 'calc(3 * (0.5vw + 0.5vh))',
-              }}
-            >
-              Scalable front-end Applcations
-            </h1>
-            We specialize in developing clean and professional Web3 applications. Our preferred development language is
-            React, a commonly used framework that will allow your application to scale with ease. Our team has years of
-            combined experience in developing Web3 React applications. Click the header above to view some examples of
-            our past work.{' '}
-          </p>{' '}
-        </div>
-        <TransparentCard></TransparentCard>
-        <div className="portfolio2">
-          <p
+            {' '}
+            Create an Eco-System designed to benefit society while generating passive income for holders. By combining
+            the love for anime and crypto, AnimeVerse will be present in events to support charitable causes to
+            communities throughout the region.
+          </p>
+          <h1
+            className={'HoverText'}
             style={{
-              maxWidth: '1000px',
+              fontSize: 'calc(3 * (0.75vw + 0.75vh))',
               textAlign: 'center',
-              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-              fontSize: '15px',
-              lineHeight: '1.4',
-              paddingBottom: '2vh',
+              maxWidth: '100vw',
+              color: '#ffffff',
+              paddingBottom: '5vh',
             }}
           >
-            <img className={'imgport2'} src={SolidityDevPic} alt="remix" />
-            <h1
-              className={'imgButton'}
-              onClick={() => window.open('https://github.com/connerstakein/staking-contract')}
-              style={{
-                textDecoration: 'underline solid 2px',
-                fontFamily: 'montserrat, sans-serif',
-                fontSize: 'calc(3 * (0.5vw + 0.5vh))',
-              }}
-            >
-              Smart Contracts
-            </h1>
-            We enjoy the challenge of designing novel applications, and smart contracts are our playground. If you click
-            the header above you can see our custom ERC20 staking contract which has been open sourced for founders and
-            developers to use and learn. We use this contract to teach others how to make custom smart contracts. Think
-            you have a unique idea? reach out to us and contact us!{' '}
-          </p>{' '}
-        </div>
-        <TransparentCard></TransparentCard>
-        <div className="portfolio3">
+            About us
+          </h1>
           <p
+            className={'HoverText'}
             style={{
-              maxWidth: '1000px',
+              fontSize: 'calc(3 * (0.5vw + 0.5vh))',
               textAlign: 'center',
-              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-              fontSize: '15px',
-              lineHeight: '1.4',
-              paddingBottom: '2vh',
+              maxWidth: '100vw',
+              color: '#ffffff',
+              paddingBottom: '5vh',
+              paddingLeft: '20px',
+              paddingRight: '20px',
             }}
           >
-            <img className={'imgport3'} src={DesignDevPic} alt="remix" />
-            <div style={{ paddingRight: '50px' }}>
-              <h1
-                className={'imgButton'}
-                onClick={() => window.open('https://xd.adobe.com/view/a2a713e4-c50b-4ab4-92a0-08ad918255c7-f7f4/')}
-                style={{
-                  textDecoration: 'underline solid 2px',
-                  fontFamily: 'montserrat, sans-serif',
-                  fontSize: 'calc(3 * (0.5vw + 0.5vh))',
-                }}
-              >
-                Design
-              </h1>
-              We have designers in house with experise in custom branding, and illustations to meet your projects needs!
-              Before we start to code we always get expert designs drafted so we will know exactly what you want to see
-              from your application. Even if you are not sure if you want the app developed but want to see some
-              preliminary mockups reach out to us! Click The header above to see a PDF of one of our most recent
-              designs.
-            </div>
-          </p>{' '}
+            {' '}
+            Cryptocurrency is the future, and so is our youth. AnimeVerse is focused on providing contributions to the
+            youth and the organizations aimed at excelling their education. Contributions will be made in Crypto and in
+            the form of educational and creative thinking material such as Comic Books and Art Supplies. We envision a
+            positive impact to all that see or hear AnimeVerse, and to achieve financial stability, whilst we expand our
+            footprint and contributions. Investors will be earning passive income and also be making a difference in
+            society.
+          </p>
         </div>
       </animated.div>
     </>
