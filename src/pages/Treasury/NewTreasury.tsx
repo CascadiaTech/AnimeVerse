@@ -21,7 +21,7 @@ import Line_pic from '../../assets/images/Line_pic.png'
 import Wallet_icon from '../../assets/images/Wallet_icon.png'
 import { ExternalLink } from '../../theme'
 import { isMobile } from '../../utils/userAgent'
-import ClaimTransaction from '../DashBoard/ClaimTransaction'
+import ClaimTransaction from '../DashBoard/TeamPage'
 const activeClassName = 'ACTIVE'
 const StyledExternalLink = styled(ExternalLink).attrs({
   activeClassName,

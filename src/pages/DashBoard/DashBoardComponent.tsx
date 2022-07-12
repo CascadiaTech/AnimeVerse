@@ -7,10 +7,9 @@ import Footer from './Footer'
 import Headernew from './Newheader'
 import PortfolioSection from './Portfolio'
 import StratSection from './Strategy'
+import TeamSection from './TeamPage'
 import AnimeTokenomics from './Tokenomics'
-
 export default function DashBoardComponent() {
-  //const { account, chainId } = useActiveWeb3React()
   //const showConnectAWallet = Boolean(!account)
   //const propernetwork = Boolean(!chainId)
   //const isNotOnMainnet = Boolean(chainId && chainId !== SupportedChainId.MAINNET)
@@ -29,6 +28,8 @@ export default function DashBoardComponent() {
         <PortfolioSection></PortfolioSection>
         <TransparentCard></TransparentCard>
         <AnimeTokenomics></AnimeTokenomics>
+        <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
+        <TeamSection></TeamSection>
         <Footer></Footer>
       </div>
     </>
