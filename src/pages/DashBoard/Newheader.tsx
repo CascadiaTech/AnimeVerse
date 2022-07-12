@@ -67,7 +67,7 @@ const Headernew = () => {
             <div style={{ marginTop: '20px' }} className="flexbox-vertical-container-left">
               <div className="flexbox-container" style={{ justifyContent: 'center' }}>
                 <button onClick={() => window.open('https://github.com/CascadiaTech')} className={'GitButton'}>
-                  How to Buy
+                  Buy
                 </button>
                 <button onClick={() => window.open('https://t.me/+8ZaQrFjaWWgzMTMx')} className={'QuoteButton'}>
                   FAQ
