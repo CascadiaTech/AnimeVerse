@@ -7,6 +7,7 @@ import Footer from './Footer'
 import Headernew from './Newheader'
 import PortfolioSection from './Portfolio'
 import StratSection from './Strategy'
+import AnimeTokenomics from './Tokenomics'
 
 export default function DashBoardComponent() {
   //const { account, chainId } = useActiveWeb3React()
@@ -26,6 +27,8 @@ export default function DashBoardComponent() {
       <TransparentCard></TransparentCard>
       <div>
         <PortfolioSection></PortfolioSection>
+        <TransparentCard></TransparentCard>
+        <AnimeTokenomics></AnimeTokenomics>
         <Footer></Footer>
       </div>
     </>

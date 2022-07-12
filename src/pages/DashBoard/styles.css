@@ -65,6 +65,22 @@
     justify-content: left;
   }
 
+.tokenomicscard{
+  background-color: #0011ffc7;
+  border-color: rgb(255, 255, 255);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'OpenDyslexic3';
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  height: 200px;
+  margin-right: 10px;
+
+}
+
 .GitButton {
   border-style: solid;
   border-width: 1px;
