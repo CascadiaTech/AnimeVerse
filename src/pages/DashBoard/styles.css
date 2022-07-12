@@ -161,6 +161,12 @@ transition: 1s;
     width: '10vw';
     height: '10vh';
   }
+  .img-icon {
+    width: '12vw';
+    height: '12vh';
+    padding-left: '2vw';
+    padding-right: '2vw;'
+  }
   .flexbox-vertical-container-left {
     display: flex;
     flex-direction: column;
