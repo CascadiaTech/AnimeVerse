@@ -7,18 +7,18 @@ import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 
 export default function PortfolioSection() {
-  const [hidden, sethidden] = useState(false)
+  const [hidden, sethidden] = useState(true)
   const ScrollY = useScrollPosition()
 
   const props = useSpring({
-    config: { delay: 1000, duration: -2000 },
+    config: { delay: 2000, duration: 1000 },
     to: { opacity: 1 },
     from: { opacity: 0 },
   })
 
   useEffect(() => {
     async function Ishidden() {
-      if (ScrollY < 450) {
+      if (ScrollY < 75) {
         return sethidden(true)
       } else {
         try {
@@ -42,6 +42,7 @@ export default function PortfolioSection() {
               textAlign: 'center',
               color: '#ffffff',
               paddingBottom: '5vh',
+              fontFamily: 'OpenDyslexic3',
             }}
           >
             Mission
@@ -49,11 +50,15 @@ export default function PortfolioSection() {
           <p
             className={'HoverText'}
             style={{
-              fontSize: 'calc(3 * (0.5vw + 0.5vh))',
+              fontSize: 'calc(3 * (0.35vw + 0.35vh))',
               textAlign: 'center',
               maxWidth: '100vw',
               color: '#ffffff',
+              fontFamily: 'OpenDyslexic3',
               paddingBottom: '5vh',
+              marginLeft: '10vw',
+              marginRight: '10vw',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
             }}
           >
             {' '}
@@ -67,6 +72,7 @@ export default function PortfolioSection() {
               fontSize: 'calc(3 * (0.75vw + 0.75vh))',
               textAlign: 'center',
               maxWidth: '100vw',
+              fontFamily: 'OpenDyslexic3',
               color: '#ffffff',
               paddingBottom: '5vh',
             }}
@@ -76,13 +82,15 @@ export default function PortfolioSection() {
           <p
             className={'HoverText'}
             style={{
-              fontSize: 'calc(3 * (0.5vw + 0.5vh))',
+              fontSize: 'calc(3 * (0.35vw + 0.35vh))',
               textAlign: 'center',
               maxWidth: '100vw',
               color: '#ffffff',
               paddingBottom: '5vh',
-              paddingLeft: '20px',
-              paddingRight: '20px',
+              fontFamily: 'OpenDyslexic3',
+              marginLeft: '10vw',
+              marginRight: '10vw',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
             }}
           >
             {' '}

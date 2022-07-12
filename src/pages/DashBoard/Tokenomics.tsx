@@ -34,8 +34,8 @@ export default function AnimeTokenomics() {
   }, [ScrollY])
   return (
     <>
-      <div className={'contentcenter'}>
-        <animated.div hidden={hidden} style={props} className={'animate__animated animate__fadeInUp'}>
+      <animated.div hidden={hidden} style={props} className={'animate__animated animate__fadeInUp'}>
+        <div className={'contentcenter'}>
           <div style={{ justifyContent: 'center' }}>
             <h1
               className={'HoverText'}
@@ -52,9 +52,6 @@ export default function AnimeTokenomics() {
             <p
               className={'HoverText'}
               style={{
-                backgroundColor: '#0011ffc7',
-                borderColor: 'rgb(255, 255, 255)',
-                borderRadius: '10px',
                 fontSize: 'calc(3 * (0.5vw + 0.5vh))',
                 textAlign: 'center',
                 fontFamily: 'OpenDyslexic3',
@@ -74,43 +71,74 @@ export default function AnimeTokenomics() {
                 maxWidth: '100vw',
                 color: '#ffffff',
                 paddingBottom: '5vh',
+                fontFamily: 'OpenDyslexic3',
               }}
             >
               {' '}
               Buy Tax / Sell Tax: 9.8%
             </p>
-            <div className={'flexbox-container'}>
-              <div className={'tokenomicscard'}>
-                Marketing 5.8%
-                <p style={{ fontSize: 'calc(3 * (0.2vw + 0.2vh))', maxWidth: '150px' }}>
-                  A multi-sig wallet has been implemented, ensuring security as we push to support our marketing
-                  outreach
-                </p>
-              </div>
-              <div className={'tokenomicscard'}>
-                ETH Reflection 2%
-                <p style={{ fontSize: 'calc(3 * (0.2vw + 0.2vh))', maxWidth: '150px' }}>
-                  Passive income by holding AnimeVerse. Holders rewarded with ETH which can be claimed anytime via our
-                  DApp.
-                </p>
-              </div>
-              <div className={'tokenomicscard'}>
-                Liquidity Pool 2%
-                <p style={{ fontSize: 'calc(3 * (0.2vw + 0.2vh))', maxWidth: '150px' }}>
-                  Auto liquidity on each transaction to build the liquidity pool and create a stable floor.
-                </p>
-              </div>
-              <div className={'tokenomicscard'}>
-                {' '}
-                <p style={{ fontSize: 'calc(3 * (0.3vw + 0.3vh))', maxWidth: '150px' }}>
-                  {' '}
-                  SAFU Contract to be Renounced + Liquidity Locked
-                </p>
-              </div>
-            </div>
           </div>
-        </animated.div>
-      </div>
+        </div>
+        <div className={'flexbox-container'} style={{ maxWidth: '100vw', width: '100vw', fontFamily: 'OpenDyslexic3' }}>
+          <div className={'tokenomicscard'} style={{ marginLeft: '10vw' }}>
+            <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> Marketing 5.8% </h1>
+            <p
+              style={{
+                fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                width: '20vw',
+                paddingLeft: '1vw',
+                fontFamily: 'OpenDyslexic3',
+                lineHeight: 1.4,
+              }}
+            >
+              A multi-sig wallet has been implemented, ensuring security as we push to support our marketing outreach
+            </p>
+          </div>
+          <div className={'tokenomicscard'}>
+            <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> ETH Reflection 2% </h1>
+            <p
+              style={{
+                fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                width: '20vw',
+                fontFamily: 'OpenDyslexic3',
+                lineHeight: 1.4,
+              }}
+            >
+              Passive income by holding AnimeVerse. Holders rewarded with ETH which can be claimed anytime via our DApp.
+            </p>
+          </div>
+          <div className={'tokenomicscard'}>
+            <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> Liquidity Pool 2% </h1>
+            <p
+              style={{
+                fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                width: '20vw',
+                textAlign: 'center',
+                fontFamily: 'OpenDyslexic3',
+                lineHeight: 1.4,
+              }}
+            >
+              Auto liquidity on each transaction to build the liquidity pool and create a stable floor.
+            </p>
+          </div>
+          <div className={'tokenomicscard'} style={{ marginRight: '20vw' }}>
+            {' '}
+            <p
+              style={{
+                fontSize: 'calc(3 * (0.35vw + 0.35vh))',
+                width: '20vw',
+                textAlign: 'center',
+              }}
+            >
+              {' '}
+              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}>
+                {' '}
+                SAFU Contract Renounced + Liquidity Locked{' '}
+              </h1>
+            </p>
+          </div>
+        </div>
+      </animated.div>
     </>
   )
 }
