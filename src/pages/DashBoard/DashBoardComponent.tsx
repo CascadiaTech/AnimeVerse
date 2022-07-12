@@ -18,7 +18,6 @@ export default function DashBoardComponent() {
   return (
     <>
       <Headernew></Headernew>
-      <p className={'header-space'} style={{ paddingTop: '1px', marginTop: '1px', marginBottom: '1px' }}></p>
       <TransparentCard style={{ height: '30vh', width: '100vw' }}></TransparentCard>
       <StratSection></StratSection>
 

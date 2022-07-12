@@ -66,7 +66,7 @@ export default function TeamSection() {
               fontFamily: 'OpenDyslexic3',
             }}
           >
-            The Team
+            Leadership Team
           </h1>
           <p
             style={{
