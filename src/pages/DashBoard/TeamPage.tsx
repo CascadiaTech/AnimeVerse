@@ -58,7 +58,7 @@ export default function TeamSection() {
           <h1
             style={{
               textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
-              fontSize: 'calc(3 * (0.45vw + 0.45vh))',
+              fontSize: 'calc(3 * (0.75vw + 0.75vh))',
               textAlign: 'center',
               color: '#ffffff',
               lineHeight: 1.4,
@@ -82,8 +82,8 @@ export default function TeamSection() {
               color: '#ffcc00',
             }}
           >
-            AnimeVerse, A unique token set out to make a difference in society by using anime & crypto in the DeFi
-            space.
+            Our team is made up of passionate and professional crypto enthusiasts, each member bringing value from
+            skillset to experience.
           </p>
           <div className={'flexbox-container'} style={{ justifyContent: 'center' }}>
             <div className={'flexbox-vertical-container'}>

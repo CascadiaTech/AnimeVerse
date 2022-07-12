@@ -3,6 +3,7 @@ import './styles.css'
 //import { SupportedChainId } from 'constants/chains'
 //import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { TransparentCard } from '../../components/Card'
+import FAQPage from './FAQ'
 import Footer from './Footer'
 import Headernew from './Newheader'
 import PortfolioSection from './Portfolio'
@@ -30,6 +31,8 @@ export default function DashBoardComponent() {
         <AnimeTokenomics></AnimeTokenomics>
         <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
         <TeamSection></TeamSection>
+        <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
+        <FAQPage></FAQPage>
         <Footer></Footer>
       </div>
     </>

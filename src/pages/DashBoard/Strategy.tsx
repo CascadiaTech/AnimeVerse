@@ -64,6 +64,8 @@ const StratSection = () => {
               lineHeight: 1.4,
               justifyContent: 'center',
               fontFamily: 'OpenDyslexic3',
+              marginLeft: '20vw',
+              marginRight: '20vw',
               marginBottom: '20px',
               color: '#ffcc00',
             }}
@@ -80,6 +82,8 @@ const StratSection = () => {
               lineHeight: 1.4,
               justifyContent: 'center',
               fontFamily: 'OpenDyslexic3',
+              marginLeft: '20vw',
+              marginRight: '20vw',
               marginBottom: '20px',
               color: '#ffffff',
             }}
@@ -96,6 +100,8 @@ const StratSection = () => {
               lineHeight: 1.4,
               justifyContent: 'center',
               fontFamily: 'OpenDyslexic3',
+              marginLeft: '20vw',
+              marginRight: '20vw',
               marginBottom: '20px',
               color: '#ffffff',
             }}
@@ -175,6 +181,8 @@ const StratSection = () => {
               lineHeight: 1.4,
               justifyContent: 'center',
               fontFamily: 'OpenDyslexic3',
+              marginLeft: '20vw',
+              marginRight: '20vw',
               marginBottom: '20px',
               color: '#ffffff',
             }}

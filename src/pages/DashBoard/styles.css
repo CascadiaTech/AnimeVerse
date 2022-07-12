@@ -682,6 +682,23 @@ transition: 1s;
   }
 
 }
+.arrow_icon {
+  height: 3vh;
+  width: 1.5vw;
+  margin-left: 40vw;
+  margin-top: 2vh;
+  transition: ease-in-out;
+  transition: 1.5s;
+}
+.arrow_icon:hover{
+  height: 3vh;
+  width: 1.5vw;
+  margin-left: 40vw;
+  transform: scale(1.1);
+  transform: rotate(90deg);
+  transition: ease-in-out;
+  transition: 1.5s;
+}
 
 @media only screen and (max-width: 550px) {
 }

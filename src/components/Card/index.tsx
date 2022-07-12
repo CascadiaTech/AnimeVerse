@@ -64,6 +64,18 @@ export const TreasuryCard = styled(Card)`
   border-radius: 10px;
   text-align: center;
 `
+export const FAQCard = styled(Card)`
+  background-color: #000085;
+  max-width: 60vw;
+  width: 60vw;
+  margin-bottom: 2vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  border-radius: 10px;
+  text-align: center;
+  &:hover {
+    cursor: pointer
+`
 export const TransparentCard = styled(Card)`
   background-color: rgba(255, 255, 255, 0);
 `
