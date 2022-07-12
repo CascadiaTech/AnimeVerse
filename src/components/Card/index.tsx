@@ -39,9 +39,15 @@ export const DarkCard = styled(Card)`
 `
 export const PurpleCard = styled(Card)`
   border-style: solid;
-  border-width: 2px;
-  background-color: rgba(34, 34, 34, 0.904);
-  border-color: rgba(2, 255, 183, 0.897);
+  background-color: #ffffff;
+  border-width: 1px;
+  border-radius: 4px;
+  border-image: linear-gradient(45deg, rgb(122, 9, 125), rgb(219, 0, 48), rgb(179, 2, 181)) 1;
+`
+export const AboutUsCard = styled(Card)`
+  border-style: solid;
+  background-color: 1100ff;
+  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.5)
   border-radius: 10px;
 `
 export const BuyBackCard = styled(Card)`

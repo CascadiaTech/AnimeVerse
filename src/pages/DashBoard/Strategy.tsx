@@ -3,21 +3,20 @@ import 'animate.css'
 
 //const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 import useScrollPosition from '@react-hook/window-scroll'
-import { PurpleCard } from 'components/Card'
+import benefitIcon from 'assets/icons/benifit_icon.png'
+import communityIcon from 'assets/icons/community.png'
+import fundIcon from 'assets/icons/fund-icon-6.png'
+import keyIcon from 'assets/icons/key_icon.png'
+import utilityIcon from 'assets/icons/utilityIcon.png'
 import React, { useEffect, useState } from 'react'
 import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 import styled from 'styled-components/macro'
-
-import Card_BubbleIcon from '../../assets/images/Card_BubbleIcon.png'
-import Card_ChartIcon from '../../assets/images/Card_ChartIcon.png'
-import Card_GraphIcon from '../../assets/images/Card_GraphIcon.png'
-import Line_pic from '../../assets/images/Line_pic.png'
 const StyledHeader = styled.text`
   font-size: calc(3 * (0.75vw + 0.75vh));
   color: #ffffff;
   justify-content: center;
-  font-family: Montserrat, sans-serif;
+  font-family: OpenDyslexic3;
   font-weight: bold;
   text-align: center;
   padding-top: 4vh;
@@ -53,94 +52,136 @@ const StratSection = () => {
       <div className={'flexbox-vertical-container-max-width'}>
         <div className={'contentcenter'}>
           {' '}
-          <StyledHeader>Our Services</StyledHeader>
+          <StyledHeader>About Us</StyledHeader>
           <p></p>
           <p></p>
           <p
             style={{
               maxWidth: '70vw',
-              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-              fontSize: '15px',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              fontSize: 'calc(3 * (0.4vw + 0.4vh))',
               textAlign: 'center',
+              lineHeight: 1.4,
               justifyContent: 'center',
-              fontFamily: 'Lato, Sans-serif',
+              fontFamily: 'OpenDyslexic3',
+              marginBottom: '20px',
+              color: '#ffcc00',
+            }}
+          >
+            AnimeVerse, A unique token set out to make a difference in society by using anime & crypto in the DeFi
+            space.
+          </p>
+          <p
+            style={{
+              maxWidth: '70vw',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              fontSize: 'calc(3 * (0.4vw + 0.4vh))',
+              textAlign: 'center',
+              lineHeight: 1.4,
+              justifyContent: 'center',
+              fontFamily: 'OpenDyslexic3',
               marginBottom: '20px',
               color: '#ffffff',
             }}
           >
-            Our team has experience in taking applications from idea to a finished masterpiece. From designing the
-            intial concept, to deploying to your production environment we have done it. Our specialization is in Web3
-            projects, our preferred frontend language ReactJS is used throughout the industry so your app can scale. We
-            also pride ourselves on wirting innovative smart contracts to suit your unique business idea. Check out
-            examples of our past work!
+            $ANIME is a community-based ERC20 token combining anime with utility. The vision is simple, an ECO-SYSTEM
+            designed to benefit society while generating passive income for investors.
+          </p>
+          <p
+            style={{
+              maxWidth: '70vw',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              fontSize: 'calc(3 * (0.4vw + 0.4vh))',
+              textAlign: 'center',
+              lineHeight: 1.4,
+              justifyContent: 'center',
+              fontFamily: 'OpenDyslexic3',
+              marginBottom: '20px',
+              color: '#ffffff',
+            }}
+          >
+            Therefore, buy and sell tax is 9.8% each way with tokenomics that reward holders generously. (Over 20% of
+            the total tax is rewarded back to holders)
           </p>
           <p></p>
           <div className={'flexbox-container'} style={{ justifyContent: 'center' }}>
             <div className={'flexbox-vertical-container'}>
-              <PurpleCard
+              <div
                 className={'HoverCard'}
                 style={{
-                  maxWidth: '20vw',
-                  minWidth: '5vw',
-                  maxHeight: '30vh',
-                  width: '20vw',
                   marginRight: '2vw',
-                  height: '30vh',
                   marginTop: 20,
                 }}
               >
-                <img className={'card-icon'} alt="icon" src={Card_ChartIcon}></img>
-                <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>React</h1>
-                <p style={{ color: '#ffffff', fontSize: 'calc(3 * (0.25vw + 0.25vh))' }}>
-                  We specialize in making responsive web applications{' '}
-                </p>
-                <img style={{ paddingBottom: '7vh' }} className={'img-size'} src={Line_pic} alt="line"></img>
-              </PurpleCard>
+                <img className={'card-icon'} alt="icon" src={benefitIcon} style={{ width: '8vw' }}></img>
+              </div>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>No Team Tokens</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
-              <PurpleCard
+              <div
                 className={'HoverCard'}
                 style={{
-                  maxWidth: '20vw',
-                  minWidth: '5vw',
-                  maxHeight: '30vh',
-                  width: '20vw',
-                  height: '30vh',
-                  marginTop: 20,
                   marginRight: '2vw',
+                  marginTop: 20,
                 }}
               >
-                <img className={'card-icon'} alt="icon" src={Card_BubbleIcon}></img>
-                <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Solidity</h1>
-                <p style={{ color: '#ffffff', fontSize: 'calc(3 * (0.25vw + 0.25vh))' }}>
-                  {' '}
-                  We offer services in Solidy Smart-Contract development
-                </p>
-                <img style={{ paddingBottom: '7vh' }} className={'img-size'} src={Line_pic} alt="line"></img>
-              </PurpleCard>
+                <img className={'card-icon'} alt="icon" src={communityIcon} style={{ width: '8vw' }}></img>
+              </div>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Community Based</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
-              <PurpleCard
+              <div
                 className={'HoverCard'}
                 style={{
-                  maxWidth: '20vw',
-                  minWidth: '5vw',
-                  maxHeight: '30vh',
-                  width: '20vw',
                   marginRight: '2vw',
-                  height: '30vh',
                   marginTop: 20,
                 }}
               >
-                <img className={'card-icon'} alt="icon" src={Card_GraphIcon}></img>
-                <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Design</h1>
-                <p style={{ color: '#ffffff', fontSize: 'calc(3 * (0.25vw + 0.25vh))' }}>
-                  We have all of your project design needs covered!
-                </p>
-                <img style={{ paddingBottom: '7vh' }} className={'img-size'} src={Line_pic} alt="line"></img>
-              </PurpleCard>
+                <img className={'card-icon'} alt="icon" src={fundIcon} style={{ width: '8vw' }}></img>
+              </div>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Passive Income</h1>
+            </div>
+            <div className={'flexbox-vertical-container'}>
+              <div
+                className={'HoverCard'}
+                style={{
+                  marginTop: 20,
+                  marginRight: '2vw',
+                }}
+              >
+                <img className={'card-icon'} alt="icon" src={utilityIcon} style={{ width: '8vw' }}></img>
+              </div>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Utility</h1>
+            </div>
+            <div className={'flexbox-vertical-container'}>
+              <div
+                className={'HoverCard'}
+                style={{
+                  marginRight: '2vw',
+                  marginTop: 20,
+                }}
+              >
+                <img className={'card-icon'} alt="icon" src={keyIcon} style={{ width: '8vw' }}></img>
+              </div>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>KYC & Audit</h1>
             </div>
           </div>
+          <p
+            style={{
+              maxWidth: '70vw',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              fontSize: 'calc(3 * (0.4vw + 0.4vh))',
+              textAlign: 'center',
+              lineHeight: 1.4,
+              justifyContent: 'center',
+              fontFamily: 'OpenDyslexic3',
+              marginBottom: '20px',
+              color: '#ffffff',
+            }}
+          >
+            Using our utility, AnimeVerse will give back to society by means of fun and educational events. With the
+            power of crypto and blockchain technology AnimeVerse will also introduce its P2E utility.
+          </p>
         </div>
       </div>
     </animated.div>
