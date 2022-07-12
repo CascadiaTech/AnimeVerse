@@ -1,9 +1,8 @@
 import './styles.css'
 
+import newLogo from 'assets/newLogo.png'
 import Row from 'components/Row'
 import styled from 'styled-components/macro'
-
-import CascadiaTech from '../../assets/images/CascadiaTech.png'
 
 const FooterBackground = styled(Row)`
   justify-self: center;
@@ -43,7 +42,7 @@ export default function FooterMenu() {
     <FooterBackground>
       <div className={'flexbox-container'}>
         <img
-          src={CascadiaTech}
+          src={newLogo}
           alt="logo"
           style={{ paddingLeft: '7vw', marginLeft: '3vw', marginRight: '8vw', maxHeight: '18vw', height: '18vw' }}
         ></img>
@@ -56,7 +55,7 @@ export default function FooterMenu() {
               fontWeight: 'bold',
             }}
           >
-            Cascadia Finance
+            AnimeVerse
           </p>
           <p
             style={{
@@ -66,7 +65,7 @@ export default function FooterMenu() {
               fontFamily: 'montserrat, sans-serif',
             }}
           >
-            CascadiaTech is here for all of your developing needs
+            Bringing Anime and crypto together
           </p>
         </div>
         <div>
@@ -119,7 +118,8 @@ export default function FooterMenu() {
             </a>
           </div>
           <p style={{ color: '#ffffff', fontSize: 'calc(3.5 * (0.15vw + 0.15vh))' }}>
-            hollowaycryptoconsulting@gmail.com
+            General Enquiries : admin@animeversetoken.com Marketing Enquiries : marketing@animeversetoken.com Charity
+            Enquiries : charity@animeversetoken.com
           </p>
         </div>
       </div>

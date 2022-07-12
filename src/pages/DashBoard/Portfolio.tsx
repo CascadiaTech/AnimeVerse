@@ -7,7 +7,7 @@ import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 
 export default function PortfolioSection() {
-  const [hidden, sethidden] = useState(true)
+  const [hidden1, sethiddens] = useState(true)
   const ScrollY = useScrollPosition()
 
   const props = useSpring({
@@ -17,23 +17,23 @@ export default function PortfolioSection() {
   })
 
   useEffect(() => {
-    async function Ishidden() {
+    async function Ishiddens() {
       if (ScrollY < 75) {
-        return sethidden(true)
+        return sethiddens(true)
       } else {
         try {
-          return sethidden(false)
+          return sethiddens(false)
         } catch (error) {
           console.log(error)
         } finally {
         }
       }
     }
-    Ishidden()
+    Ishiddens()
   }, [ScrollY])
   return (
     <>
-      <animated.div hidden={hidden} style={props} className={'animate__animated animate__fadeInUp'}>
+      <animated.div hidden={hidden1} style={props} className={'animate__animated animate__fadeInUp'}>
         <div style={{ justifyContent: 'center' }}>
           <h1
             className={'HoverText'}

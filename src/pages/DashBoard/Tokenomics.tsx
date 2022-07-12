@@ -44,7 +44,6 @@ export default function AnimeTokenomics() {
                 textAlign: 'center',
                 color: '#ffffff',
                 fontFamily: 'OpenDyslexic3',
-                paddingBottom: '5vh',
               }}
             >
               Tokenomics
@@ -57,7 +56,6 @@ export default function AnimeTokenomics() {
                 fontFamily: 'OpenDyslexic3',
                 maxWidth: '100vw',
                 color: '#ffffff',
-                paddingBottom: '5vh',
               }}
             >
               {' '}
@@ -70,7 +68,6 @@ export default function AnimeTokenomics() {
                 textAlign: 'center',
                 maxWidth: '100vw',
                 color: '#ffffff',
-                paddingBottom: '5vh',
                 fontFamily: 'OpenDyslexic3',
               }}
             >

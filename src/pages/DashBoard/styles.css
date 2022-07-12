@@ -663,16 +663,18 @@ transition: 1s;
  }
 
  @media only screen and (max-width: 550px) {
-  .header-image {
-    vertical-align: top;
-    align-self: top;
-    height: 0vh;
-    width: 0vw;
-  }
   .header-space {
     height: 22vh;
     width: 2vw;
   }
+  .header-image {
+    padding-bottom: 10;
+    align-items: 'right';
+    float: 'left';
+    width: '40vw';
+    height: '40vh';
+    align-self: 'right';
+   }
   
   .flexbox-vertical-container-left { 
     display: flex;
