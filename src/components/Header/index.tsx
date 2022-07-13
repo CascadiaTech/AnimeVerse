@@ -198,9 +198,6 @@ export default function Header() {
           <StyledNavLink id={'/Dashboard'} to={'/Dashboard'}>
             <Trans> Home </Trans>
           </StyledNavLink>
-          <StyledNavLink id={'/Swap'} to={'/Swap'}>
-            <Trans>Swap </Trans>
-          </StyledNavLink>
         </HeaderLinks>
         <HeaderControls>
           <HeaderElement>
