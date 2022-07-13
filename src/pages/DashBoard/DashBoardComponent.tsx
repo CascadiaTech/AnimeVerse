@@ -18,7 +18,9 @@ export default function DashBoardComponent() {
   return (
     <>
       <Headernew></Headernew>
-      <TransparentCard style={{ height: '30vh', width: '100vw' }}></TransparentCard>
+      <div className={'mobilespacing'}>
+        <TransparentCard></TransparentCard>
+      </div>
       <StratSection></StratSection>
 
       <TransparentCard></TransparentCard>

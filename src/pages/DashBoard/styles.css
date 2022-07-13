@@ -699,6 +699,10 @@ transition: 1s;
   transition: ease-in-out;
   transition: 1.5s;
 }
+.mobilespacing {
+  height: '30vh';
+   width: '100vw';
+  }
 
 @media only screen and (max-width: 550px) {
   .video{ 
@@ -736,6 +740,11 @@ transition: 1s;
     min-width: 15vw;
     height: 5vh;
     max-height: 3vh;
+  }
+
+  .mobilespacing {
+  height: '5vh';
+   width: '100vw';
   }
   .GitButton{
     border-style: solid;
