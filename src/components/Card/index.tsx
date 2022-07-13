@@ -70,6 +70,7 @@ export const FAQCard = styled(Card)`
   width: 60vw;
   margin-bottom: 2vh;
   margin-left: 20vw;
+  min-height: 8vh;
   margin-right: 20vw;
   border-radius: 10px;
   text-align: center;

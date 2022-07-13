@@ -14,6 +14,7 @@ import { useSpring } from 'react-spring/web'
 import styled from 'styled-components/macro'
 const StyledHeader = styled.text`
   font-size: calc(3 * (0.75vw + 0.75vh));
+  text-shadow: '0px 2px 0px rgba(0, 0, 0, 0.4)';
   color: #ffffff;
   justify-content: center;
   font-family: OpenDyslexic3;
@@ -121,7 +122,7 @@ const StratSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={benefitIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>No Team Tokens</h1>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Team Tokens</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div
@@ -133,7 +134,7 @@ const StratSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={communityIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Community Based</h1>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Community</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div
@@ -145,7 +146,7 @@ const StratSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={fundIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Passive Income</h1>
+              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Income</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div

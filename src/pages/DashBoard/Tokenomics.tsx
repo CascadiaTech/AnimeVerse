@@ -41,6 +41,7 @@ export default function AnimeTokenomics() {
               className={'HoverText'}
               style={{
                 fontSize: 'calc(3 * (0.75vw + 0.75vh))',
+                textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 textAlign: 'center',
                 color: '#ffffff',
                 fontFamily: 'OpenDyslexic3',
@@ -52,6 +53,7 @@ export default function AnimeTokenomics() {
               className={'HoverText'}
               style={{
                 fontSize: 'calc(3 * (0.5vw + 0.5vh))',
+                textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 textAlign: 'center',
                 fontFamily: 'OpenDyslexic3',
                 maxWidth: '100vw',
@@ -65,6 +67,7 @@ export default function AnimeTokenomics() {
               className={'HoverText'}
               style={{
                 fontSize: 'calc(3 * (0.5vw + 0.5vh))',
+                textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 textAlign: 'center',
                 maxWidth: '100vw',
                 color: '#ffffff',
@@ -76,8 +79,11 @@ export default function AnimeTokenomics() {
             </p>
           </div>
         </div>
-        <div className={'flexbox-container'} style={{ maxWidth: '100vw', width: '100vw', fontFamily: 'OpenDyslexic3' }}>
-          <div className={'tokenomicscard'} style={{ marginLeft: '10vw' }}>
+        <div
+          className={'flexbox-container'}
+          style={{ maxWidth: '100vw', width: '100vw', fontFamily: 'OpenDyslexic3', justifyContent: 'space-around' }}
+        >
+          <div className={'tokenomicscard'} style={{ marginLeft: '20vw' }}>
             <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> Marketing 5.8% </h1>
             <p
               style={{

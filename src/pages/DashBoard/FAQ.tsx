@@ -6,6 +6,8 @@ export default function FAQPage() {
   const [isHidden2, setishidden2] = useState(true)
   const [isHidden3, setishidden3] = useState(true)
   const [isHidden4, setishidden4] = useState(true)
+  const [isHidden5, setishidden5] = useState(true)
+  const [isHidden6, setishidden6] = useState(true)
   function toggleHidden() {
     setishidden(!isHidden)
   }
@@ -17,6 +19,12 @@ export default function FAQPage() {
   }
   function toggleHidden4() {
     setishidden4(!isHidden4)
+  }
+  function toggleHidden5() {
+    setishidden5(!isHidden5)
+  }
+  function toggleHidden6() {
+    setishidden6(!isHidden6)
   }
   return (
     <>
@@ -34,19 +42,19 @@ export default function FAQPage() {
           </p>
           <FAQCard onClick={toggleHidden}>
             {' '}
-            <div className={'flexbox-container'}>
+            <div>
               <p
                 style={{
                   textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
-                  justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
                   color: '#ffffff',
                 }}
               >
                 What is Anime?
+                <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
               </p>
             </div>
             {!isHidden && (
@@ -69,7 +77,7 @@ export default function FAQPage() {
           </FAQCard>
           <FAQCard onClick={toggleHidden2}>
             {' '}
-            <div className={'flexbox-container'}>
+            <div>
               <p
                 style={{
                   textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
@@ -82,6 +90,7 @@ export default function FAQPage() {
                 }}
               >
                 Why Trust AnimeVerse?
+                <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
               </p>
             </div>
             {!isHidden2 && (
@@ -105,7 +114,7 @@ export default function FAQPage() {
           </FAQCard>
           <FAQCard onClick={toggleHidden3}>
             {' '}
-            <div className={'flexbox-container'}>
+            <div>
               <p
                 style={{
                   textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
@@ -118,6 +127,7 @@ export default function FAQPage() {
                 }}
               >
                 Is Liquidity Locked?
+                <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
               </p>
             </div>
             {!isHidden3 && (
@@ -139,7 +149,7 @@ export default function FAQPage() {
           </FAQCard>
           <FAQCard onClick={toggleHidden4}>
             {' '}
-            <div className={'flexbox-container'}>
+            <div>
               <p
                 style={{
                   textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
@@ -152,6 +162,7 @@ export default function FAQPage() {
                 }}
               >
                 Was there a private sale or pre-sale?
+                <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
               </p>
             </div>
             {!isHidden4 && (
@@ -171,18 +182,76 @@ export default function FAQPage() {
               </p>
             )}
           </FAQCard>
-        </div>
-        <div className={'flexbox-vertical-container-transform'}>
-          <p style={{ paddingTop: '13vh', marginTop: '13vh' }}></p>
-          <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
-          <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
-          <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
-          <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
-          <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
-          <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
-          <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
-          <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
-          <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
+          <FAQCard onClick={toggleHidden5}>
+            {' '}
+            <div>
+              <p
+                style={{
+                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                  textAlign: 'left',
+                  lineHeight: 1.3,
+                  justifyContent: 'left',
+                  fontFamily: 'OpenDyslexic3',
+                  color: '#ffffff',
+                }}
+              >
+                Team Token Allocation or Dev Tax?
+                <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
+              </p>
+            </div>
+            {!isHidden5 && (
+              <p
+                style={{
+                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                  textAlign: 'left',
+                  lineHeight: 1.3,
+                  justifyContent: 'left',
+                  fontFamily: 'OpenDyslexic3',
+                  color: '#ffffff',
+                }}
+              >
+                {' '}
+                There was NO team token allocation, and we have NO dev tax in our tokenomics.
+              </p>
+            )}
+          </FAQCard>
+          <FAQCard onClick={toggleHidden6}>
+            {' '}
+            <div>
+              <p
+                style={{
+                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                  textAlign: 'left',
+                  lineHeight: 1.3,
+                  justifyContent: 'left',
+                  fontFamily: 'OpenDyslexic3',
+                  color: '#ffffff',
+                }}
+              >
+                Smart Contract Audit?
+                <img className={'arrow_icon'} src={ArrowIcon} alt={'arrow'}></img>
+              </p>
+            </div>
+            {!isHidden6 && (
+              <p
+                style={{
+                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                  textAlign: 'left',
+                  lineHeight: 1.3,
+                  justifyContent: 'left',
+                  fontFamily: 'OpenDyslexic3',
+                  color: '#ffffff',
+                }}
+              >
+                {' '}
+                All of our Smart Contracts will be audited.
+              </p>
+            )}
+          </FAQCard>
         </div>
       </div>
     </>

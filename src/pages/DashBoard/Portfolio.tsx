@@ -39,9 +39,9 @@ export default function PortfolioSection() {
             className={'HoverText'}
             style={{
               fontSize: 'calc(3 * (0.75vw + 0.75vh))',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
               textAlign: 'center',
               color: '#ffffff',
-              paddingBottom: '5vh',
               fontFamily: 'OpenDyslexic3',
             }}
           >
@@ -70,14 +70,14 @@ export default function PortfolioSection() {
             className={'HoverText'}
             style={{
               fontSize: 'calc(3 * (0.75vw + 0.75vh))',
+              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
               textAlign: 'center',
               maxWidth: '100vw',
               fontFamily: 'OpenDyslexic3',
               color: '#ffffff',
-              paddingBottom: '5vh',
             }}
           >
-            About us
+            Vision
           </h1>
           <p
             className={'HoverText'}

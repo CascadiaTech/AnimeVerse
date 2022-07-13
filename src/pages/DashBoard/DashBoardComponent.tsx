@@ -28,7 +28,7 @@ export default function DashBoardComponent() {
         <AnimeTokenomics></AnimeTokenomics>
         <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
         <TeamSection></TeamSection>
-        <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
+        <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
         <FAQPage></FAQPage>
         <Footer></Footer>
       </div>
