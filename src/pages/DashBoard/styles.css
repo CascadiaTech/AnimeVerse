@@ -670,6 +670,10 @@ transition: 1s;
   height: '20vh';
   align-self: 'right';
  }
+ .mobilespace {
+  padding-top: 40vh;
+  width: '100vw';
+  }
 
  @media only screen and (max-width: 550px) {
   
@@ -699,10 +703,6 @@ transition: 1s;
   transition: ease-in-out;
   transition: 1.5s;
 }
-.mobilespacing {
-  height: '30vh';
-   width: '100vw';
-  }
 
 @media only screen and (max-width: 550px) {
   .video{ 
@@ -729,7 +729,7 @@ transition: 1s;
     width: 100vw;
     margin-top: 0;
     padding-bottom: 0;
-    margin-right: 0vw;
+    margin-right: 3vw;
     margin-left: 0vw;
     background-color: #0011ffc7;
     border-color: rgb(255, 255, 255);
@@ -742,9 +742,9 @@ transition: 1s;
     max-height: 3vh;
   }
 
-  .mobilespacing {
-  height: '5vh';
-   width: '100vw';
+  .mobilespace {
+  width: '100vw';
+  padding-top: 5vh;
   }
   .GitButton{
     border-style: solid;
@@ -758,7 +758,7 @@ transition: 1s;
     width: 100vw;
     margin-top: 0;
     padding-bottom: 0;
-    margin-right: 0vw;
+    margin-right: 3vw;
     margin-left: 0vw;
     background-color: #0011ffc7;
     border-color: rgb(255, 255, 255);

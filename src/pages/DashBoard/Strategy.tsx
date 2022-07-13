@@ -20,11 +20,10 @@ const StyledHeader = styled.text`
   font-family: OpenDyslexic3;
   font-weight: bold;
   text-align: center;
-  padding-top: 4vh;
 `
 
 const StratSection = () => {
-  const [hidden, sethidden] = useState(false)
+  const [hidden, sethidden] = useState(true)
   const ScrollY = useScrollPosition()
 
   const props = useSpring({
@@ -35,7 +34,7 @@ const StratSection = () => {
 
   useEffect(() => {
     async function Ishidden() {
-      if (ScrollY < 50) {
+      if (ScrollY < 40) {
         return sethidden(true)
       } else {
         try {
@@ -50,6 +49,7 @@ const StratSection = () => {
   }, [ScrollY])
   return (
     <animated.div hidden={hidden} style={props} className={'animate__animated animate__fadeInUp'}>
+      <div className={'mobilespace'}></div>
       <div className={'flexbox-vertical-container-max-width'}>
         <div className={'contentcenter'}>
           {' '}
