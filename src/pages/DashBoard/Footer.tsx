@@ -91,7 +91,7 @@ export default function FooterMenu() {
           >
             <a
               className={'four'}
-              href="https://twitter.com/CascadiaFinance"
+              href="https://twitter.com/AnimeVerseToken?t=kruSfQkxcFg6fBXgmFGx6A&s=09"
               target="_blank"
               rel="noreferrer"
               style={{ fontFamily: 'montserrat, sans-serif', fontSize: 'calc(3.5 * (0.25vw + 0.25vh))' }}
@@ -100,7 +100,7 @@ export default function FooterMenu() {
             </a>
             <a
               className={'four'}
-              href="https://t.me/+8ZaQrFjaWWgzMTMx"
+              href="https://t.me/AnimeVerse_PORTAL"
               target="_blank"
               rel="noreferrer"
               style={{ fontFamily: 'montserrat, sans-serif', fontSize: 'calc(3.5 * (0.25vw + 0.25vh))' }}
@@ -109,12 +109,12 @@ export default function FooterMenu() {
             </a>
             <a
               className={'four'}
-              href="https://github.com/CascadiaTech"
+              href="https://app.uniswap.org/#/swap?inputCurrency=0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67&chain=mainnet"
               target="_blank"
               rel="noreferrer"
               style={{ fontFamily: 'montserrat, sans-serif', fontSize: 'calc(3.5 * (0.25vw + 0.25vh))' }}
             >
-              Github
+              Uniswap Buy Link
             </a>
           </div>
           <p style={{ color: '#ffffff', fontSize: 'calc(3.5 * (0.15vw + 0.15vh))' }}>
