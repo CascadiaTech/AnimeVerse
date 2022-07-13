@@ -99,7 +99,7 @@
   font-family: 'OpenDyslexic3';
   color: rgb(255, 255, 255);
   margin-top: 15px;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
   margin-right: 2.5vw;
   margin-left: 4vw;
   background-color: #0011ffc7;
@@ -135,7 +135,7 @@
   height: 5vh;
   max-height: 5vh;
   margin-top: 15px;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
   margin-right: 2.5vw;
   padding-left: 3%;
   padding-right: 3%;
@@ -701,6 +701,16 @@ transition: 1s;
 }
 
 @media only screen and (max-width: 550px) {
+  .video{ 
+    position: absolute;
+    left: 0px;
+    min-width: 550px;
+    max-width: 550px;
+    max-height: 80vh;
+    min-height: 80vh;
+    top: 0px;
+    z-index: -10;
+  }
 }
 
   a.header.uni:link {color:#ffffff;}
