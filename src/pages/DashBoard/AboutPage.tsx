@@ -22,7 +22,7 @@ const StyledHeader = styled.text`
   text-align: center;
 `
 
-const StratSection = () => {
+const AboutSection = () => {
   const [hidden, sethidden] = useState(true)
   const ScrollY = useScrollPosition()
 
@@ -196,4 +196,4 @@ const StratSection = () => {
     </animated.div>
   )
 }
-export default StratSection
+export default AboutSection

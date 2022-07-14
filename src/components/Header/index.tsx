@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom'
 //import { useDarkModeManager } from 'state/user/hooks'
 import { useNativeCurrencyBalances } from 'state/wallet/hooks'
 import styled from 'styled-components/macro'
+import { Link } from 'react-scroll'
 
 import ANime from '../../assets/ANime.png'
 //import Menu from '../Menu' - this is the menu that includes uniswaps docs etc.
@@ -76,7 +77,7 @@ const HeaderLinks = styled(Row)`
   width: 100vw;
   max-width: 100vw;
   padding: 15px;
-  padding-left: 150px;
+  padding-left: 5vw;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 100px;
@@ -195,9 +196,113 @@ export default function Header() {
           ></img>
         </UniIcon>
         <HeaderLinks>
-          <StyledNavLink id={'/Dashboard'} to={'/Dashboard'}>
-            <Trans> Home </Trans>
-          </StyledNavLink>
+          <ul style={{ display: 'flex', listStyle: 'none', justifyContent: 'space-evenly', cursor: 'pointer' }}>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="HeaderNew"
+                spy={true}
+                smooth={true}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="AboutSection"
+                spy={true}
+                smooth={true}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="PortfolioSection"
+                spy={true}
+                smooth={true}
+              >
+                Mission
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="AnimeTokenomics"
+                spy={true}
+                smooth={true}
+              >
+                AnimeTokenomics
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="TeamSection"
+                spy={true}
+                smooth={true}
+              >
+                Team
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="FAQPage"
+                spy={true}
+                smooth={true}
+              >
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                }}
+                to="Contact"
+                spy={true}
+                smooth={true}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
         </HeaderLinks>
         <HeaderControls>
           <HeaderElement>

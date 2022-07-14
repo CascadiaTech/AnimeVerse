@@ -66,13 +66,25 @@ const Headernew = () => {
             </div>
             <div style={{ marginTop: '20px' }} className="flexbox-vertical-container-left">
               <div className="flexbox-container" style={{ justifyContent: 'center' }}>
-                <button onClick={() => window.open('')} className={'GitButton'}>
+                <button
+                  onClick={() =>
+                    window.open(
+                      'https://app.uniswap.org/#/swap?inputCurrency=0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67&chain=mainnet'
+                    )
+                  }
+                  className={'GitButton'}
+                >
                   Buy
                 </button>
-                <button onClick={() => window.open('')} className={'QuoteButton'}>
-                  FAQ
-                </button>
-                <button onClick={() => window.open('')} className={'QuoteButton'}>
+                <button className={'QuoteButton'}>Dapp</button>
+                <button
+                  onClick={() =>
+                    window.open(
+                      'https://www.dextools.io/app/ether/pair-explorer/0xfd362c758a756bac42fce0ea7e83f5bb72730c6e'
+                    )
+                  }
+                  className={'QuoteButton'}
+                >
                   Chart
                 </button>
               </div>

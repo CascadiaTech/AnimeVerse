@@ -74,6 +74,7 @@ export const FAQCard = styled(Card)`
   margin-right: 20vw;
   border-radius: 10px;
   text-align: center;
+  transition: 1s;
   &:hover {
     cursor: pointer
 `
