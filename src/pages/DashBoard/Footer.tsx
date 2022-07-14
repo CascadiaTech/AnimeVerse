@@ -114,7 +114,7 @@ export default function FooterMenu() {
               rel="noreferrer"
               style={{ fontFamily: 'montserrat, sans-serif', fontSize: 'calc(3.5 * (0.25vw + 0.25vh))' }}
             >
-              Uniswap Buy Link
+              Buy
             </a>
           </div>
           <p style={{ color: '#ffffff', fontSize: 'calc(3.5 * (0.15vw + 0.15vh))' }}>
