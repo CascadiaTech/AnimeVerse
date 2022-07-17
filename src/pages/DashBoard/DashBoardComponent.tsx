@@ -17,9 +17,7 @@ export default function DashBoardComponent() {
 
   return (
     <>
-      <div id="HeaderNew">
-        <Headernew></Headernew>
-      </div>
+      <Headernew></Headernew>
       <div id="AboutSection">
         <AboutSection></AboutSection>
       </div>

@@ -3,15 +3,14 @@ import { Contract } from '@ethersproject/contracts'
 import { Web3Provider } from '@ethersproject/providers'
 import useScrollPosition from '@react-hook/window-scroll'
 import { useWeb3React } from '@web3-react/core'
-import { Spin } from 'antd'
+import LinePic from 'assets/LinePic.png'
+//import { Spin } from 'antd'
 import { GreyCard } from 'components/Card'
 //import { RowBetween } from 'components/Row'
 //import useActiveWeb3React from 'hooks/useActiveWeb3React'
 //import useAddTokenToMetamask from 'hooks/useAddTokenToMetamask' - /////from transaction cofrimation modal index line 127
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components/macro'
-
-import header from '../../assets/images/header.png'
 const ClaimButton = styled.button`
   position: relative;
   display: 'block';
@@ -135,40 +134,24 @@ const ClaimTransaction = () => {
     }
   }, [showConnectAWallet, account, signer])
 
-  if (scrollY > 20)
-    // useLayoutEffect document.getElementById("GreyCard").style.transition = "all 2s";
-    return (
-      <>
-        <HoverCard
-          className="HoverCard"
-          style={{
-            transition: "all 2's",
-            backgroundColor: '#f70000',
-            fontSize: '12x',
-            maxWidth: '800px',
-            maxHeight: 200,
-            marginBottom: '10px',
-          }}
-        >
-          <StyledImg
-            style={{ paddingBottom: 10, alignItems: 'left' }}
-            src={header}
-            height={200}
-            width={400}
-            alt="eader"
-          ></StyledImg>
-          <DonateButton style={{ display: 'block' }} onClick={handleDonate}>
-            Donate to Charity
-          </DonateButton>
-          <ClaimButton color="secondary" disabled={!account || loading} onClick={handleClaim}>
-            {loading ? <Spin indicator={antIcon} className="add-spinner" /> : 'Claim'}
-          </ClaimButton>
-        </HoverCard>
-      </>
-    )
-  else {
-    return <></>
-  }
+  return (
+    <>
+      <div className={'flexbox-container'}>
+        <div className={'Dapp-card'}>
+          <div className={'Dapp-card-title'}> Hey There</div>{' '}
+          <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
+          <div className={'flexbox-container'}>
+            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Current Price</p>
+            <p style={{ color: '#000000', paddingLeft: '10vw' }}>0.001$</p>
+          </div>
+          <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
+        </div>
+        <div className={'Dapp-card'}>
+          <div className={'Dapp-card-title'}> Hey There</div>{' '}
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default ClaimTransaction

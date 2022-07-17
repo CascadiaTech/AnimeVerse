@@ -14,6 +14,7 @@ import Web3ReactManager from '../components/Web3ReactManager'
 import { useModalOpen, useToggleModal } from '../state/application/hooks'
 import { ApplicationModal } from '../state/application/reducer'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
+import Dapp from './Dapp'
 import DashBoard from './DashBoard'
 //import Landing from './Landing'
 //import Pool from './Pool'
@@ -84,6 +85,10 @@ export default function App() {
                 <Route strict path="/DashBoard" component={DashBoard} />
                 <Route exact strict path="/Dashboard">
                   <Redirect to="/DashBoard" />
+                </Route>
+                <Route strict path="/Dapp" component={Dapp} />
+                <Route exact strict path="/Dapp">
+                  <Redirect to="/Dapp" />
                 </Route>
               </Switch>
             </Suspense>

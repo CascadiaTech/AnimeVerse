@@ -9,7 +9,6 @@ import fundIcon from 'assets/icons/fund-icon-6.png'
 import keyIcon from 'assets/icons/key_icon.png'
 import utilityIcon from 'assets/icons/utilityIcon.png'
 import React, { useEffect, useState } from 'react'
-import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 import styled from 'styled-components/macro'
 const StyledHeader = styled.text`
@@ -48,7 +47,7 @@ const AboutSection = () => {
     Ishidden()
   }, [ScrollY])
   return (
-    <animated.div hidden={hidden} style={props} className={'animate__animated animate__fadeInUp'}>
+    <>
       <div className={'mobilespace'}></div>
       <div className={'flexbox-vertical-container-max-width'}>
         <div className={'contentcenter'}>
@@ -193,7 +192,7 @@ const AboutSection = () => {
           </p>
         </div>
       </div>
-    </animated.div>
+    </>
   )
 }
 export default AboutSection

@@ -40,7 +40,7 @@ export default function Dropdown() {
         {options.map((option) => (
           <>
             <MenuItem>
-              <Link activeClass="active" to="HeaderNew" spy={true} smooth={true}>
+              <Link spy={true} smooth={true}>
                 <div>Home</div>
               </Link>
             </MenuItem>

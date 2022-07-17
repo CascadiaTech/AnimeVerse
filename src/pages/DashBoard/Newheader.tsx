@@ -6,6 +6,7 @@ import useScrollPosition from '@react-hook/window-scroll'
 import newLogo from 'assets/newLogo.png'
 import video from 'assets/video.mp4'
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 import styled from 'styled-components/macro'
@@ -26,6 +27,30 @@ const StyledHeaderText2 = styled.text`
   position: relative;
   left: 15px;
   font-family: Montserrat, sans-serif;
+`
+const activeClassName = 'ACTIVE'
+const StyledNavLink = styled(NavLink).attrs({
+  activeClassName,
+})`
+  ${({ theme }) => theme.flexRowNoWrap}
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  word-break: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  &.${activeClassName} {
+    border-radius: 14px;
+    font-weight: 600;
+    justify-content: center;
+    color: #000000;
+    background-color: ${({ theme }) => theme.bg0};
+  }
 `
 
 const Headernew = () => {
@@ -72,11 +97,30 @@ const Headernew = () => {
                       'https://app.uniswap.org/#/swap?inputCurrency=0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67&chain=mainnet'
                     )
                   }
-                  className={'GitButton'}
+                  className={'QuoteButton'}
                 >
                   Buy
                 </button>
-                <button className={'QuoteButton'}>Dapp</button>
+                <button className={'QuoteButton'}>
+                  <StyledNavLink
+                    style={{
+                      textShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',
+                      textAlign: 'center',
+                      justifyContent: 'center',
+                      fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                      fontFamily: 'OpenDyslexic3',
+                      color: '#ffffff',
+                      transform: 'translate(0%, -10%)',
+                      paddingLeft: '3%',
+                      paddingRight: '3%',
+                      transition: '1s',
+                    }}
+                    id={'/Dapp'}
+                    to={'/Dapp'}
+                  >
+                    Dapp
+                  </StyledNavLink>
+                </button>
                 <button
                   onClick={() =>
                     window.open(

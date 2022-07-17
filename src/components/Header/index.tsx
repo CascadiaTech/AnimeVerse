@@ -109,7 +109,6 @@ const AccountElement = styled.div<{ active: boolean }>`
   flex-direction: row;
   align-items: center;
   border: 2px solid;
-  border-color: rgba(2, 255, 183, 0.897);
   border-radius: 16px;
   text-color: #ffffff;
   color: #000000;
@@ -145,31 +144,20 @@ const StyledNavLink = styled(NavLink).attrs({
   activeClassName,
 })`
   ${({ theme }) => theme.flexRowNoWrap}
-  align-items: left;
-  border-radius: 3rem;
-  outline: none;
   cursor: pointer;
   text-decoration: none;
-  color: #ffffff;
-  font-size: calc(3.5 * (0.2vw + 0.2vh));
-  font-weight: 500;
-  padding: 8px 12px;
-  word-break: break-word;
-  overflow: hidden;
-  white-space: nowrap;
+  color: #1a12ff;
+  font-size: 1rem;
+  padding-left: 2vw;
+  font-family: OpenDyslexic3;
+  font-size: 'calc(3 * (0.3vw + 0.3vh))';
   &.${activeClassName} {
-    font-weight: 600;
     justify-content: center;
-    color: #ffffff;
+    color: #1a12ff;
   }
-  :hover {
-    color: #09008a;
-    text-shadow: 0px 0px 4px #ccceff;
-    font-weight: bold;
-  }
-  ,
+  :hover,
+  color: #ffcc00;
   :focus {
-    color: #ffffff;
   }
 `
 
@@ -198,19 +186,9 @@ export default function Header() {
         <HeaderLinks>
           <ul style={{ display: 'flex', listStyle: 'none', justifyContent: 'space-evenly', cursor: 'pointer' }}>
             <li>
-              <Link
-                className={'header-link'}
-                style={{
-                  paddingLeft: '1.5vw',
-                  fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
-                }}
-                to="HeaderNew"
-                spy={true}
-                smooth={true}
-              >
-                Home
-              </Link>
+              <StyledNavLink id={'/Dashboard'} to={'/Dashboard'}>
+                <Trans>Home</Trans>
+              </StyledNavLink>
             </li>
             <li>
               <Link
@@ -218,7 +196,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="AboutSection"
                 spy={true}
@@ -233,7 +211,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="PortfolioSection"
                 spy={true}
@@ -248,7 +226,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="AnimeTokenomics"
                 spy={true}
@@ -263,7 +241,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="TeamSection"
                 spy={true}
@@ -278,7 +256,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="FAQPage"
                 spy={true}
@@ -293,7 +271,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.25vw + 0.25vh))',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="Contact"
                 spy={true}
