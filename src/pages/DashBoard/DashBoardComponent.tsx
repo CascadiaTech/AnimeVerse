@@ -8,8 +8,10 @@ import FAQPage from './FAQ'
 import Footer from './Footer'
 import Headernew from './Newheader'
 import PortfolioSection from './Portfolio'
+import { SocialScrollBar } from './ScrollBar'
 import TeamSection from './TeamPage'
 import AnimeTokenomics from './Tokenomics'
+
 export default function DashBoardComponent() {
   //const showConnectAWallet = Boolean(!account)
   //const propernetwork = Boolean(!chainId)
@@ -22,6 +24,7 @@ export default function DashBoardComponent() {
         <AboutSection></AboutSection>
       </div>
       <TransparentCard></TransparentCard>
+      <SocialScrollBar></SocialScrollBar>
       <div>
         <div id="PortfolioSection">
           <PortfolioSection></PortfolioSection>
