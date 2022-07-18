@@ -146,14 +146,13 @@ const StyledNavLink = styled(NavLink).attrs({
   ${({ theme }) => theme.flexRowNoWrap}
   cursor: pointer;
   text-decoration: none;
-  color: #1a12ff;
-  font-size: 1rem;
+  color: #ffffff;
   padding-left: 2vw;
   font-family: OpenDyslexic3;
   font-size: 'calc(3 * (0.3vw + 0.3vh))';
   &.${activeClassName} {
     justify-content: center;
-    color: #1a12ff;
+    color: #ffffff;
   }
   :hover,
   color: #ffcc00;
@@ -195,6 +194,7 @@ export default function Header() {
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
+                  color: '#ffffff',
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
@@ -210,6 +210,7 @@ export default function Header() {
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
+                  color: '#ffffff',
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
@@ -225,6 +226,7 @@ export default function Header() {
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
+                  color: '#ffffff',
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
@@ -240,6 +242,7 @@ export default function Header() {
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
+                  color: '#ffffff',
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
@@ -255,6 +258,7 @@ export default function Header() {
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
+                  color: '#ffffff',
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
@@ -270,6 +274,7 @@ export default function Header() {
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
+                  color: '#ffffff',
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}

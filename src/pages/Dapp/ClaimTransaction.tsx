@@ -11,6 +11,8 @@ import { GreyCard } from 'components/Card'
 //import useAddTokenToMetamask from 'hooks/useAddTokenToMetamask' - /////from transaction cofrimation modal index line 127
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components/macro'
+
+import Sidermenu from './Sidemenu/SidemenuComponent'
 const ClaimButton = styled.button`
   position: relative;
   display: 'block';
@@ -136,9 +138,10 @@ const ClaimTransaction = () => {
 
   return (
     <>
-      <div className={'flexbox-container'}>
-        <div className={'Dapp-card'}>
-          <div className={'Dapp-card-title'}> Hey There</div>{' '}
+      <Sidermenu></Sidermenu>
+      <div id="DashBoard" className={'flexbox-container'}>
+        <div className={'Dapp-card'} style={{ marginLeft: '15vw' }}>
+          <div className={'Dapp-card-title'}> Company Stats</div>{' '}
           <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
           <div className={'flexbox-container'}>
             <p style={{ paddingLeft: '4vw', color: '#000000' }}>Current Price</p>
@@ -147,7 +150,41 @@ const ClaimTransaction = () => {
           <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
         </div>
         <div className={'Dapp-card'}>
-          <div className={'Dapp-card-title'}> Hey There</div>{' '}
+          <div className={'Dapp-card-title'}>Company Stats</div>{' '}
+        </div>
+      </div>
+
+      <p style={{ paddingTop: '5vh', marginTop: '5vh', marginBottom: '5vh' }}></p>
+
+      <div id="NFT" className={'flexbox-container'}>
+        <div className={'NFT-card'} style={{ marginLeft: '15vw' }}>
+          <div className={'NFT-card-title'}>NFT</div>{' '}
+          <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
+          <div className={'flexbox-container'} style={{ textAlign: 'center' }}>
+            <p style={{ color: '#000000', textAlign: 'center' }}>Current Price</p>
+            <p style={{ color: '#000000', textAlign: 'center' }}>0.001$</p>
+          </div>
+          <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
+        </div>
+        <div className={'NFT-card'}>
+          <div className={'NFT-card-title'}>NFT</div>{' '}
+        </div>
+      </div>
+
+      <p style={{ paddingTop: '5vh', marginTop: '5vh', marginBottom: '5vh' }}></p>
+
+      <div id="Staking" className={'flexbox-container'}>
+        <div className={'Staking-card'} style={{ marginLeft: '15vw' }}>
+          <div className={'Staking-card-title'}>Staking</div>{' '}
+          <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
+          <div className={'flexbox-container'}>
+            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Current Price</p>
+            <p style={{ color: '#000000', paddingLeft: '10vw' }}>0.001$</p>
+          </div>
+          <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
+        </div>
+        <div className={'Staking-card'}>
+          <div className={'Staking-card-title'}>Staking</div>{' '}
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ import styled from 'styled-components/macro'
 const StyledHeader = styled.text`
   font-size: calc(3 * (0.75vw + 0.75vh));
   text-shadow: '0px 2px 0px rgba(0, 0, 0, 0.4)';
-  color: #ffffff;
+  color: #000000;
   justify-content: center;
   font-family: OpenDyslexic3;
   font-weight: bold;
@@ -58,7 +58,7 @@ const AboutSection = () => {
           <p
             style={{
               maxWidth: '70vw',
-              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
               fontSize: 'calc(3 * (0.4vw + 0.4vh))',
               textAlign: 'center',
               lineHeight: 1.4,
@@ -76,7 +76,7 @@ const AboutSection = () => {
           <p
             style={{
               maxWidth: '70vw',
-              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
               fontSize: 'calc(3 * (0.4vw + 0.4vh))',
               textAlign: 'center',
               lineHeight: 1.4,
@@ -85,7 +85,7 @@ const AboutSection = () => {
               marginLeft: '20vw',
               marginRight: '20vw',
               marginBottom: '20px',
-              color: '#ffffff',
+              color: '#000000',
             }}
           >
             $ANIME is a community-based ERC20 token combining anime with utility. The vision is simple, an ECO-SYSTEM
@@ -94,7 +94,7 @@ const AboutSection = () => {
           <p
             style={{
               maxWidth: '70vw',
-              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
               fontSize: 'calc(3 * (0.4vw + 0.4vh))',
               textAlign: 'center',
               lineHeight: 1.4,
@@ -103,7 +103,7 @@ const AboutSection = () => {
               marginLeft: '20vw',
               marginRight: '20vw',
               marginBottom: '20px',
-              color: '#ffffff',
+              color: '#000000',
             }}
           >
             Therefore, buy and sell tax is 9.8% each way with tokenomics that reward holders generously. (Over 20% of
@@ -121,7 +121,7 @@ const AboutSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={benefitIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Team Tokens</h1>
+              <h1 style={{ color: '#000000', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Team Tokens</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div
@@ -133,7 +133,7 @@ const AboutSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={communityIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Community</h1>
+              <h1 style={{ color: '#000000', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Community</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div
@@ -145,7 +145,7 @@ const AboutSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={fundIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Income</h1>
+              <h1 style={{ color: '#000000', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Income</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div
@@ -157,7 +157,7 @@ const AboutSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={utilityIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Utility</h1>
+              <h1 style={{ color: '#000000', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>Utility</h1>
             </div>
             <div className={'flexbox-vertical-container'}>
               <div
@@ -169,13 +169,13 @@ const AboutSection = () => {
               >
                 <img className={'card-icon'} alt="icon" src={keyIcon} style={{ width: '8vw' }}></img>
               </div>
-              <h1 style={{ color: '#ffffff', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>KYC & Audit</h1>
+              <h1 style={{ color: '#000000', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>KYC & Audit</h1>
             </div>
           </div>
           <p
             style={{
               maxWidth: '70vw',
-              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
+              textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
               fontSize: 'calc(3 * (0.4vw + 0.4vh))',
               textAlign: 'center',
               lineHeight: 1.4,
@@ -184,7 +184,7 @@ const AboutSection = () => {
               marginLeft: '20vw',
               marginRight: '20vw',
               marginBottom: '20px',
-              color: '#ffffff',
+              color: '#000000',
             }}
           >
             Using our utility, AnimeVerse will give back to society by means of fun and educational events. With the
