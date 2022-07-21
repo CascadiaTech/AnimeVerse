@@ -205,6 +205,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.8",
+    "react-icons": "^4.4.0",
     "react-image-scroller": "^0.3.0",
     "react-popper": "^2.2.3",
     "react-pro-sidebar": "^0.7.1",

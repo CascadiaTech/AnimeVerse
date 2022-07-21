@@ -6,6 +6,7 @@ import { TransparentCard } from '../../components/Card'
 import AboutSection from './AboutPage'
 import FAQPage from './FAQ'
 import Footer from './Footer'
+import HowToBuyPage from './HowToBuy'
 import Headernew from './Newheader'
 import PortfolioSection from './Portfolio'
 import { SocialScrollBar } from './ScrollBar'
@@ -21,6 +22,7 @@ export default function DashBoardComponent() {
     <>
       <Headernew></Headernew>
       <div id="AboutSection">
+        <HowToBuyPage></HowToBuyPage>
         <AboutSection></AboutSection>
       </div>
       <TransparentCard></TransparentCard>

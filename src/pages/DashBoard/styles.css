@@ -23,36 +23,8 @@
     right: 150%;
     transform: translate(-20%, 50%)
   }
-  .MarketCap {
-    position: relative;
-    top: -50%;
-    right: -150%;
-    transform: translate( -200%, 50%)
-  }
-  .Wallet {
-    position: relative;
-    top: -50%;
-    right: 150%;
-    transform: translate(200%, 50%)
-  }
-  .center-icon-mobile {
-    position: relative;
-    top: 100%;
-    right: 100%;
-    transform: translate(-50%, 800%)
-  }
-  .MarketCap-mobile {
-    position: relative;
-    top: 100%;
-    right: 100%;
-    transform: translate( -100%, 750%)
-  }
-  .Wallet-mobile {
-    position: relative;
-    top: 100%;
-    right: 100%;
-    transform: translate(50%, 50%)
-  }
+
+
   .vertical-align-middle{
     display: table-cell;
     vertical-align: bottom;
@@ -73,7 +45,13 @@
     margin-right: 2vw;
     border-radius: 15px;
     position: relative;
-    background-color: #f516e9e3;
+    background-color: #EDEDED;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38);
+    border: 1px solid;
+  }
+  .Dapp-card:hover{
+    transform: scale(1.05);
+    transition: 1s;
   }
   .Dapp-card-title {
     min-height: 5vh;
@@ -84,7 +62,6 @@
     text-align: center;
     border-radius: 15px;
     position: absolute;
-    background-color: #0bfff3e3;
   }
 
   .NFT-card {
@@ -531,47 +508,7 @@ transition: 1s;
   transition: width 0.5s, height 0.5s, opacity 2s 2s, duration 5s;
 }
   
-  .timeline {
-    height: 300px;
-    width: 5px;
-    background-color: #e5e5e5;
-  }
-  
-  .stub1 {
-    line-height: 300px;
-    font-size: 24px;
-    background-color: #eae4e4;
-  }
-  
-  .stub2 {
-    height: 1000px;
-  }
-  
-  .circle {
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border-radius: 50%;
-    background-color: #e5e5e5;
-  }
-  
-  .circleWrapper {
-    position: relative;
-  }
-  
-  .message {
-    position: relative;
-    top: 20%;
-    left: 65%;
-    min-width: 150px;
-    max-width: 100px;
-    font-weight: bold;
-    transition: opacity 6.0s ;
  
-  }
   .borderedCard {
     border-style: solid;
     background-color: 'transparent';
@@ -593,27 +530,7 @@ transition: 1s;
     transition: opacity 300ms ease-out, transform 300ms ease-out;
   }
   
-    .vertical-timeline-element-content-box {
-      padding: 1em;
-      border-radius: 0.25em;
-      border: 4px solid transparent;
-      border-image: linear-gradient(to right, #000000, #0098ED);
-      border-image-slice: 1;
-    }
   
-    .vertical-timeline-element-content::before {
-      border-left-color: #0098ED;
-    }
-  
-    @media only screen and (min-width: 1170px) {
-      .vertical-timeline-element-content .vertical-timeline-element-date {
-        left: 136%;
-      }
-  
-      :nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date {
-        right: 136% !important;
-      }
-    }
     .video {
       position: absolute;
       left: 0px;
@@ -633,75 +550,6 @@ transition: 1s;
   font-size: 18px;
   cursor: pointer;
  }
-
-  .portfolio {
-    width: 95vw;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    font-weight:600;
-    color:rgb(255, 255, 255);
-  }
-
-  .imgport1 {
-    width: 50%;
-    float: left;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.65);
-    transition: 1s;
-  }
-.imgport1:hover {
-    transform: scale(1.1);
-    transition: 1s;
-    }
-
- 
-
-  .portfolio2 {
-    width: 95vw;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    padding-left: 25vw;
-    font-weight:600;
-    color:rgb(255, 255, 255);
-  }
-
-  .imgport2 {
-    width: 50%;
-    float: right;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.65);
-    transition: 1s;
-  }
-.imgport2:hover {
-    transform: scale(1.1);
-    transition: 1s;
-    }
-  
-  .portfolio3 {
-    width: 95vw;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    font-weight:600;
-    color:rgb(255, 255, 255);
-  }
-
-  .imgport3 {
-    width: 50%;
-    float: left;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.65);
-    transition: 1s;
-  }
-  .imgport3:hover {
-    transform: scale(1.1);
-    transition: 1s;
-    }
  
   .img {
     width: 40%;
@@ -745,6 +593,32 @@ transition: 1s;
   }
 
  @media only screen and (max-width: 550px) {
+  
+  .flexbox-vertical-container-left { 
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: left;
+  }
+
+}
+
+.HowToBuy {
+max-width: 100vw;
+justify-self: center;
+justify-content: center;
+}
+@media only screen and (min-width: 550px) {
+  
+  .HowToBuy { 
+visibility: hidden;
+margin-top: 10vh;
+margin-bottom: 3vh;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
   
   .flexbox-vertical-container-left { 
     display: flex;
@@ -882,10 +756,10 @@ transition: 1s;
       transition: 1s;
     }
     @keyframes mymove {
-      0% {left: 0vw; opacity: 0;}
-      25% {left: 34vw; opacity: 1;}
-      50% {left: 34vw; opacity: 1;}
-      75% {left: 34vw; opacity: 1;}
-      100% {left: 65vw; opacity: 0;}
+      0% {display: flex; justify-content: left; opacity: 0;}
+      25% {display: flex; justify-content: center; opacity: 1;}
+      50% {justify-self: center; opacity: 1;}
+      75% {justify-content: center; opacity: 1;}
+      100% {justify-content: right; opacity: 0;}
     }
     

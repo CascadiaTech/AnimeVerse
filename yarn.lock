@@ -19420,14 +19420,6 @@ react-scroll@^1.8.6:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
-<<<<<<< HEAD
-react-slidedown@^2.4.5:
-  version "2.4.7"
-  resolved "https://registry.yarnpkg.com/react-slidedown/-/react-slidedown-2.4.7.tgz#c09e72bba8aac25018fd644ece041da771854589"
-  integrity sha512-HGDfrqo70r1WVE0DwrySPdCT27/2wcZaJYh5kOnmuPSCtjDDJrNkDdn4Ep/cma2VVfwupeAGhbc2pbrGThU6VQ==
-  dependencies:
-    tslib "^2.0.0"
-=======
 react-scrollbar@^0.5.6:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/react-scrollbar/-/react-scrollbar-0.5.6.tgz#bd57b45714f8d70e56813fe299d7fb3a2e42a27b"
@@ -19436,7 +19428,13 @@ react-scrollbar@^0.5.6:
     config "^1.24.0"
     line-height "^0.1.1"
     react-motion "^0.5.2"
->>>>>>> 60eef0c476d85c2f4650ef5fae6c797a3013c315
+
+react-slidedown@^2.4.5:
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/react-slidedown/-/react-slidedown-2.4.7.tgz#c09e72bba8aac25018fd644ece041da771854589"
+  integrity sha512-HGDfrqo70r1WVE0DwrySPdCT27/2wcZaJYh5kOnmuPSCtjDDJrNkDdn4Ep/cma2VVfwupeAGhbc2pbrGThU6VQ==
+  dependencies:
+    tslib "^2.0.0"
 
 react-spring@^8.0.27:
   version "8.0.27"
