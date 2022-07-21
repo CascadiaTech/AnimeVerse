@@ -4,7 +4,6 @@ import './styles.css'
 //import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { TransparentCard } from '../../components/Card'
 import AboutSection from './AboutPage'
-import FAQPage from './FAQ'
 import Footer from './Footer'
 import Headernew from './Newheader'
 import PortfolioSection from './Portfolio'
@@ -38,9 +37,6 @@ export default function DashBoardComponent() {
           <TeamSection></TeamSection>
         </div>
         <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
-        <div id="FAQPage">
-          <FAQPage></FAQPage>
-        </div>
         <div id="Contact">
           <Footer></Footer>
         </div>
