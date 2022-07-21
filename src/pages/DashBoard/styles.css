@@ -624,7 +624,7 @@ justify-items: bottom;
 
 .mobilebuybuttons {
   position: relative;
-  top: 8vh;
+  top: 0vh;
 }
 .Animebuybutton {
   border-style: solid;
