@@ -40,7 +40,6 @@ const StyledNavLink = styled(NavLink).attrs({
   color: #000000;
   font-size: 1rem;
   font-weight: 500;
-  padding: 8px 12px;
   word-break: break-word;
   overflow: hidden;
   white-space: nowrap;
@@ -109,6 +108,7 @@ const Headernew = () => {
                       justifyContent: 'center',
                       fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                       fontFamily: 'OpenDyslexic3',
+                      paddingBottom: '2vh',
                       color: '#ffffff',
                       transform: 'translate(0%, -10%)',
                       paddingLeft: '3%',
@@ -118,7 +118,7 @@ const Headernew = () => {
                     id={'/Dapp'}
                     to={'/Dapp'}
                   >
-                    Dapp
+                    Dashboard
                   </StyledNavLink>
                 </button>
                 <button

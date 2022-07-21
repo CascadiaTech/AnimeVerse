@@ -43,7 +43,7 @@ export default function AnimeTokenomics() {
                 fontSize: 'calc(3 * (0.75vw + 0.75vh))',
                 textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 textAlign: 'center',
-                color: '#ffffff',
+                color: '#000000',
                 fontFamily: 'OpenDyslexic3',
               }}
             >
@@ -57,7 +57,7 @@ export default function AnimeTokenomics() {
                 textAlign: 'center',
                 fontFamily: 'OpenDyslexic3',
                 maxWidth: '100vw',
-                color: '#ffffff',
+                color: '#000000',
               }}
             >
               {' '}
@@ -70,7 +70,7 @@ export default function AnimeTokenomics() {
                 textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 textAlign: 'center',
                 maxWidth: '100vw',
-                color: '#ffffff',
+                color: '#000000',
                 fontFamily: 'OpenDyslexic3',
               }}
             >
@@ -81,64 +81,79 @@ export default function AnimeTokenomics() {
         </div>
         <div
           className={'flexbox-container'}
-          style={{ maxWidth: '100vw', width: '100vw', fontFamily: 'OpenDyslexic3', justifyContent: 'space-around' }}
+          style={{ maxWidth: '100vw', width: '100vw', fontFamily: 'OpenDyslexic3', justifyContent: 'center' }}
         >
-          <div className={'tokenomicscard'} style={{ marginLeft: '20vw' }}>
-            <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> Marketing 5.8% </h1>
-            <p
-              style={{
-                fontSize: 'calc(3 * (0.25vw + 0.25vh))',
-                width: '20vw',
-                paddingLeft: '1vw',
-                fontFamily: 'OpenDyslexic3',
-                lineHeight: 1.4,
-              }}
-            >
-              A multi-sig wallet has been implemented, ensuring security as we push to support our marketing outreach
-            </p>
+          <div id={'content'} style={{ marginLeft: '2vw' }}>
+            <div className={'flexbox-vertical-container'}>
+              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> Marketing 5.8% </h1>
+              <p
+                style={{
+                  fontSize: 'calc(3 * (0.22vw + 0.22vh))',
+                  width: '20vw',
+                  paddingLeft: '1vw',
+                  fontFamily: 'OpenDyslexic3',
+                  lineHeight: 1.4,
+                }}
+              >
+                A multi-sig wallet has been implemented, ensuring security as we push to support our marketing outreach
+              </p>
+            </div>
           </div>
-          <div className={'tokenomicscard'}>
-            <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> ETH Reflection 2% </h1>
-            <p
-              style={{
-                fontSize: 'calc(3 * (0.25vw + 0.25vh))',
-                width: '20vw',
-                fontFamily: 'OpenDyslexic3',
-                lineHeight: 1.4,
-              }}
-            >
-              Passive income by holding AnimeVerse. Holders rewarded with ETH which can be claimed anytime via our DApp.
-            </p>
-          </div>
-          <div className={'tokenomicscard'}>
-            <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}> Liquidity Pool 2% </h1>
-            <p
-              style={{
-                fontSize: 'calc(3 * (0.3vw + 0.3vh))',
-                width: '20vw',
-                textAlign: 'center',
-                fontFamily: 'OpenDyslexic3',
-                lineHeight: 1.4,
-              }}
-            >
-              Auto liquidity on each transaction to build the liquidity pool and create a stable floor.
-            </p>
-          </div>
-          <div className={'tokenomicscard'} style={{ marginRight: '20vw' }}>
-            {' '}
-            <p
-              style={{
-                fontSize: 'calc(3 * (0.35vw + 0.35vh))',
-                width: '20vw',
-                textAlign: 'center',
-              }}
-            >
-              {' '}
+          <div id={'content'} style={{ marginLeft: '2vw' }}>
+            <div className={'flexbox-vertical-container'}>
               <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}>
                 {' '}
-                SAFU Contract Renounced + Liquidity Locked{' '}
+                ETH Reflection 2%{' '}
               </h1>
-            </p>
+              <p
+                style={{
+                  fontSize: 'calc(3 * (0.22vw + 0.22vh))',
+                  width: '20vw',
+                  fontFamily: 'OpenDyslexic3',
+                  lineHeight: 1.4,
+                }}
+              >
+                Passive income by holding AnimeVerse. Holders rewarded with ETH which can be claimed anytime via our
+                DApp.
+              </p>
+            </div>
+          </div>
+          <div id={'content'} style={{ marginLeft: '2vw' }}>
+            <div className={'flexbox-vertical-container'}>
+              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}>
+                {' '}
+                Liquidity Pool 2%{' '}
+              </h1>
+              <p
+                style={{
+                  fontSize: 'calc(3 * (0.23vw + 0.23vh))',
+                  width: '20vw',
+                  textAlign: 'center',
+                  fontFamily: 'OpenDyslexic3',
+                  lineHeight: 1.4,
+                }}
+              >
+                Auto liquidity on each transaction to build the liquidity pool and create a stable floor.
+              </p>
+            </div>
+          </div>
+          <div id={'content'} style={{ marginLeft: '2vw', marginRight: '2vw' }}>
+            <div className={'flexbox-vertical-container'}>
+              {' '}
+              <p
+                style={{
+                  fontSize: 'calc(3 * (0.35vw + 0.35vh))',
+                  width: '20vw',
+                  textAlign: 'center',
+                }}
+              >
+                {' '}
+                <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3' }}>
+                  {' '}
+                  SAFU Contract Renounced + Liquidity Locked{' '}
+                </h1>
+              </p>
+            </div>
           </div>
         </div>
       </animated.div>

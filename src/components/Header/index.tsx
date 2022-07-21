@@ -185,12 +185,7 @@ export default function Header() {
         <HeaderLinks>
           <ul style={{ display: 'flex', listStyle: 'none', justifyContent: 'space-evenly', cursor: 'pointer' }}>
             <li>
-              <StyledNavLink id={'/Dashboard'} to={'/Dashboard'}>
-                <Trans>Home</Trans>
-              </StyledNavLink>
-            </li>
-            <li>
-              <Link
+              <NavLink
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
@@ -198,15 +193,14 @@ export default function Header() {
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
-                to="AboutSection"
-                spy={true}
-                smooth={true}
+                to={'/Dapp'}
+                id={'/Dapp'}
               >
-                About Us
-              </Link>
+                Dashboard
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
@@ -214,12 +208,11 @@ export default function Header() {
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
-                to="PortfolioSection"
-                spy={true}
-                smooth={true}
+                to={'/Dashboard'}
+                id={'/Dashboard'}
               >
-                Mission
-              </Link>
+                Home
+              </NavLink>
             </li>
             <li>
               <Link
@@ -254,7 +247,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link
+              <NavLink
                 className={'header-link'}
                 style={{
                   paddingLeft: '1.5vw',
@@ -262,12 +255,10 @@ export default function Header() {
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
-                to="FAQPage"
-                spy={true}
-                smooth={true}
+                to="./FAQ"
               >
                 FAQ
-              </Link>
+              </NavLink>
             </li>
             <li>
               <Link

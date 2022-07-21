@@ -16,6 +16,7 @@ import { ApplicationModal } from '../state/application/reducer'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import Dapp from './Dapp'
 import DashBoard from './DashBoard'
+import FAQ from './FAQ'
 //import Landing from './Landing'
 //import Pool from './Pool'
 //import PoolV2 from './Pool/v2'
@@ -89,6 +90,10 @@ export default function App() {
                 <Route strict path="/Dapp" component={Dapp} />
                 <Route exact strict path="/Dapp">
                   <Redirect to="/Dapp" />
+                </Route>
+                <Route strict path="/FAQ" component={FAQ} />
+                <Route exact strict path="/FAQ">
+                  <Redirect to="/FAQ" />
                 </Route>
               </Switch>
             </Suspense>

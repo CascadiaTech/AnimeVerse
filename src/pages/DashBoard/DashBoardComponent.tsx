@@ -20,20 +20,23 @@ export default function DashBoardComponent() {
   return (
     <>
       <Headernew></Headernew>
+      <HowToBuyPage></HowToBuyPage>
+      <TransparentCard></TransparentCard>
+      <SocialScrollBar></SocialScrollBar>
+      <TransparentCard></TransparentCard>
+      <div id="AnimeTokenomics">
+        <AnimeTokenomics></AnimeTokenomics>
+      </div>
+      <TransparentCard></TransparentCard>
       <div id="AboutSection">
-        <HowToBuyPage></HowToBuyPage>
         <AboutSection></AboutSection>
       </div>
       <TransparentCard></TransparentCard>
-      <SocialScrollBar></SocialScrollBar>
       <div>
         <div id="PortfolioSection">
           <PortfolioSection></PortfolioSection>
         </div>
         <TransparentCard></TransparentCard>
-        <div id="AnimeTokenomics">
-          <AnimeTokenomics></AnimeTokenomics>
-        </div>
         <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
         <div id="TeamSection">
           <TeamSection></TeamSection>

@@ -86,13 +86,15 @@ export default function TeamSection() {
                   alt="icon"
                   src={MrMoon}
                   style={{
-                    width: '15vw',
+                    width: 'auto',
+                    paddingBottom: '0%',
                     minHeight: '30vh',
                     maxHeight: '30vh',
                     paddingLeft: '2vw',
                     paddingRight: '2vw',
                   }}
                 ></img>
+                <p> MR.Moon</p>
               </div>
               <div className={'flexbox-vertical-container'}>
                 <img
@@ -100,13 +102,14 @@ export default function TeamSection() {
                   alt="icon"
                   src={HR}
                   style={{
-                    width: '15vw',
+                    width: 'auto',
                     minHeight: '30vh',
                     maxHeight: '30vh',
                     paddingLeft: '2vw',
                     paddingRight: '2vw',
                   }}
                 ></img>
+                <p> H.R.</p>
               </div>
               <div className={'flexbox-vertical-container'}>
                 <img
@@ -114,13 +117,14 @@ export default function TeamSection() {
                   alt="icon"
                   src={Momo}
                   style={{
-                    width: '15vw',
+                    width: 'auto',
                     minHeight: '30vh',
                     maxHeight: '30vh',
                     paddingLeft: '2vw',
                     paddingRight: '2vw',
                   }}
                 ></img>
+                <p> Momo</p>
               </div>
             </div>
             <p

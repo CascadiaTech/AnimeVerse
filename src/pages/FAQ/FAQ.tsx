@@ -1,4 +1,4 @@
-import './styles.css'
+import '../DashBoard/styles.css'
 import 'animate.css'
 
 import useScrollPosition from '@react-hook/window-scroll'
@@ -62,9 +62,8 @@ export default function FAQPage() {
           <p
             style={{
               fontSize: 'calc(3 * (0.75vw + 0.75vh))',
-              color: '#ffffff',
+              color: '#000000',
               fontFamily: 'OpenDyslexic3',
-              textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
             }}
           >
             FAQ
@@ -74,13 +73,12 @@ export default function FAQPage() {
             <div>
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   transition: '1s',
                   lineHeight: 1.3,
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 What is Anime?
@@ -90,14 +88,13 @@ export default function FAQPage() {
             {!isHidden && (
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   transition: '1s',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 {' '}
@@ -111,13 +108,12 @@ export default function FAQPage() {
             <div>
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 Why Trust AnimeVerse?
@@ -127,13 +123,12 @@ export default function FAQPage() {
             {!isHidden2 && (
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 {' '}
@@ -148,13 +143,12 @@ export default function FAQPage() {
             <div>
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 Is Liquidity Locked?
@@ -164,13 +158,12 @@ export default function FAQPage() {
             {!isHidden3 && (
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 {' '}
@@ -183,13 +176,12 @@ export default function FAQPage() {
             <div>
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 Was there a private sale or pre-sale?
@@ -199,13 +191,12 @@ export default function FAQPage() {
             {!isHidden4 && (
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 {' '}
@@ -218,13 +209,12 @@ export default function FAQPage() {
             <div>
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 Team Token Allocation or Dev Tax?
@@ -234,13 +224,12 @@ export default function FAQPage() {
             {!isHidden5 && (
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 {' '}
@@ -253,13 +242,12 @@ export default function FAQPage() {
             <div>
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 Smart Contract Audit?
@@ -269,13 +257,12 @@ export default function FAQPage() {
             {!isHidden6 && (
               <p
                 style={{
-                  textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                   textAlign: 'left',
                   lineHeight: 1.3,
                   justifyContent: 'left',
                   fontFamily: 'OpenDyslexic3',
-                  color: '#ffffff',
+                  color: '#000000',
                 }}
               >
                 {' '}
