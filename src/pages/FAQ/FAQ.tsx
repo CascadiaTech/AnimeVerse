@@ -57,7 +57,7 @@ export default function FAQPage() {
   }, [ScrollY])
   return (
     <>
-      <div className={'flexbox-container'}>
+      <div className={'flexbox-container'} style={{ transition: '1s' }}>
         <div className={'flexbox-vertical-container'} style={{ width: '100vw' }}>
           <p
             style={{

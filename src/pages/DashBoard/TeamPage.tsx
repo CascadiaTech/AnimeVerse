@@ -30,7 +30,7 @@ export default function TeamSection() {
 
   useEffect(() => {
     async function Ishidden() {
-      if (ScrollY < 50) {
+      if (ScrollY < 2000) {
         return sethidden(true)
       } else {
         try {
@@ -103,7 +103,8 @@ export default function TeamSection() {
                   src={HR}
                   style={{
                     width: 'auto',
-                    minHeight: '30vh',
+                    minHeight: '20vh',
+                    height: '30vh',
                     maxHeight: '30vh',
                     paddingLeft: '2vw',
                     paddingRight: '2vw',

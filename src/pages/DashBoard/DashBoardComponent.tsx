@@ -37,7 +37,6 @@ export default function DashBoardComponent() {
           <PortfolioSection></PortfolioSection>
         </div>
         <TransparentCard></TransparentCard>
-        <p style={{ paddingTop: '30px', marginTop: '30px', marginBottom: '30px' }}></p>
         <div id="TeamSection">
           <TeamSection></TeamSection>
         </div>

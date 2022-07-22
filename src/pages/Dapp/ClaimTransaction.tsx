@@ -1,20 +1,26 @@
+import '../DashBoard/styles.css'
+
 import { LoadingOutlined } from '@ant-design/icons'
 import { Contract } from '@ethersproject/contracts'
 import { getDefaultProvider, Web3Provider } from '@ethersproject/providers'
 import { formatEther, formatUnits } from '@ethersproject/units'
 import useScrollPosition from '@react-hook/window-scroll'
 import { useWeb3React } from '@web3-react/core'
-import LinePic from 'assets/LinePic.png'
+//import LinePic from 'assets/LinePic.png'
+import newLogo from 'assets/newLogo.png'
+import video from 'assets/video.mp4'
 //import { Spin } from 'antd'
 //import { RowBetween } from 'components/Row'
 //import useActiveWeb3React from 'hooks/useActiveWeb3React'
 //import useAddTokenToMetamask from 'hooks/useAddTokenToMetamask' - /////from transaction cofrimation modal index line 127
 import React, { useCallback, useEffect, useState } from 'react'
 
+import { abiObject } from './abi'
+import NFTMintSection from './NFTMint'
+import NFTStakingSection from './NftStaking'
 import { pairabiObject } from './pairabi'
 import Sidermenu from './Sidemenu/SidemenuComponent'
 import { USDCWETHpairabiObject } from './WETHUSDCPair'
-
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 
 const ClaimTransaction = () => {
@@ -218,15 +224,10 @@ const ClaimTransaction = () => {
 
     try {
       setLoading(true)
-      const response = await fetch(
-        'https://api.etherscan.io/api?module=contract&action=getabi&address=0x83e9f223e1edb3486f876ee888d76bfba26c475a&apikey=432BW4Y2JX817J6CJAWGHAFTXQNFVXRU2Q'
-      ) //ClientTokenABIneeded
-      const data = await response.json()
-      const abi = data.result
-      console.log(abi)
+      const abi = abiObject
       const contractaddress = '0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67' // "clienttokenaddress"
       const contract = new Contract(contractaddress, abi, signer)
-      const ClaimBalance = await contract.approve(account, 1) //.claim(account,amount)
+      const ClaimBalance = await contract.giveMeWelfarePlease() //.claim(account,amount)
       const Claimtxid = await ClaimBalance
 
       return Claimtxid
@@ -240,76 +241,112 @@ const ClaimTransaction = () => {
   }, [showConnectAWallet, account, signer])
 
   return (
-    <>
+    <div>
       <Sidermenu></Sidermenu>
-      <div id="DashBoard" className={'flexbox-container'}>
-        <div className={'Dapp-card'} style={{ marginLeft: '15vw' }}>
-          <div className={'Dapp-card-title'} style={{ fontFamily: 'OpenDyslexic3' }}>
-            {' '}
-            Company Statistics
-          </div>{' '}
-          <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
-          <div className={'flexbox-container'}>
-            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Current Price</p>
-            <p style={{ color: '#000000', paddingLeft: '10vw' }}>{AnimePriceinUsd}</p>
+      <video autoPlay loop muted playsInline className="video">
+        <source src={video} type="video/mp4" />
+      </video>
+
+      <img
+        className={'dapp-header-image'}
+        src={newLogo}
+        alt="header"
+        style={{
+          width: 'auto',
+          height: 'auto',
+          maxWidth: '30vw',
+          maxHeight: '30vw',
+          padding: '0%',
+          float: 'right',
+          paddingRight: '0%',
+        }}
+      ></img>
+      <div className={'centeronmobile'}>
+        <div className={'flexbox-container'}>
+          <div id="DashBoard">
+            <div className={'Dapp-card'}>
+              <div>
+                {' '}
+                <p style={{ textAlign: 'center', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
+                  Company Statistics
+                </p>{' '}
+              </div>{' '}
+              <div className={'flexbox-vertical-container'}>
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
+                    Current Price
+                  </p>
+                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{AnimePriceinUsd}</p>
+                </div>
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
+                    Market Capitalization
+                  </p>
+                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{MarketCap}</p>
+                </div>
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
+                    Holders
+                  </p>
+                  <p
+                    style={{
+                      color: 'rgba(255, 153, 0, 0.979)',
+                      alignSelf: 'right',
+                      textAlign: 'right',
+                      paddingRight: '2vw',
+                    }}
+                  >
+                    {holders}
+                  </p>
+                </div>
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
+                    Total Liquidity
+                  </p>
+                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{TotalLiquidity}</p>
+                </div>
+              </div>
+            </div>
+            <div className={'Dapp-card'}>
+              <div className={'flexbox-vertical-container'}>
+                <p style={{ textAlign: 'center', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
+                  {' '}
+                  User Stats
+                </p>{' '}
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)' }}>User Anime Token Balance</p>
+                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{MarketCap}</p>
+                </div>
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', paddingRight: '2vw', color: 'rgba(255, 153, 0, 0.979)' }}>
+                    Your NFT Balance
+                  </p>
+                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', justifySelf: 'right', paddingRight: '2vw' }}>
+                    1 Trillion
+                  </p>
+                </div>
+                <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
+                  <p style={{ paddingLeft: '2vw', paddingRight: '2vw', color: 'rgba(255, 153, 0, 0.979)' }}>
+                    Your Pending Reflections
+                  </p>
+                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', justifySelf: 'right', paddingRight: '2vw' }}>
+                    1 Trillion
+                  </p>
+                </div>
+                <button className={'GitButton'} onClick={() => handleClaim()} style={{ width: '20vw' }}>
+                  {' '}
+                  Claim Reflections{' '}
+                </button>
+              </div>
+            </div>
           </div>
-          <div className={'flexbox-container'}>
-            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Market Capitalization</p>
-            <p style={{ color: '#000000', paddingLeft: '10vw' }}>{MarketCap}</p>
-          </div>
-          <div className={'flexbox-container'}>
-            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Total Supply</p>
-            <p style={{ color: '#000000', paddingLeft: '10vw' }}>1 Trillion</p>
-          </div>
-          <div className={'flexbox-container'}>
-            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Holders</p>
-            <p style={{ color: '#000000', paddingLeft: '10vw', textAlign: 'right' }}>{holders}</p>
-          </div>
-          <div className={'flexbox-container'}>
-            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Total Liquidity</p>
-            <p style={{ color: '#000000', paddingLeft: '10vw' }}>{TotalLiquidity}</p>
-          </div>
-          <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
-        </div>
-        <div className={'Dapp-card'}>
-          <div className={'Dapp-card-title'}>User Stats</div>{' '}
         </div>
       </div>
-
       <p style={{ paddingTop: '5vh', marginTop: '5vh', marginBottom: '5vh' }}></p>
-
-      <div id="NFT" className={'flexbox-container'}>
-        <div className={'NFT-card'} style={{ marginLeft: '15vw' }}>
-          <div className={'NFT-card-title'}>NFT</div>{' '}
-          <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
-          <div className={'flexbox-container'} style={{ textAlign: 'center' }}>
-            <p style={{ color: '#000000', textAlign: 'center' }}>Current Price</p>
-            <p style={{ color: '#000000', textAlign: 'center' }}>0.001$</p>
-          </div>
-          <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
-        </div>
-        <div className={'NFT-card'}>
-          <div className={'NFT-card-title'}>NFT</div>{' '}
-        </div>
-      </div>
-
+      <NFTMintSection></NFTMintSection>
       <p style={{ paddingTop: '5vh', marginTop: '5vh', marginBottom: '5vh' }}></p>
-
-      <div id="Staking" className={'flexbox-container'}>
-        <div className={'Staking-card'} style={{ marginLeft: '15vw' }}>
-          <div className={'Staking-card-title'}>Staking</div>{' '}
-          <p style={{ paddingTop: '10px', marginTop: '10px', marginBottom: '10px' }}></p>
-          <div className={'flexbox-container'}>
-            <p style={{ paddingLeft: '4vw', color: '#000000' }}>Current Price</p>
-            <p style={{ color: '#000000', paddingLeft: '10vw' }}>0.001$</p>
-          </div>
-          <img src={LinePic} style={{ width: '25vw', transform: 'translate( -5%, -20% )' }} alt="line"></img>
-        </div>
-        <div className={'Staking-card'}>
-          <div className={'Staking-card-title'}>Staking</div>{' '}
-        </div>
-      </div>
-    </>
+      <NFTStakingSection></NFTStakingSection>
+    </div>
   )
 }
 

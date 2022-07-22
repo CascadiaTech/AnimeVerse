@@ -18,7 +18,7 @@ export default function PortfolioSection() {
 
   useEffect(() => {
     async function Ishiddens() {
-      if (ScrollY < 75) {
+      if (ScrollY < 1800) {
         return sethiddens(true)
       } else {
         try {

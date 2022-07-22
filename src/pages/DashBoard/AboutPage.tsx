@@ -34,7 +34,7 @@ const AboutSection = () => {
 
   useEffect(() => {
     async function Ishidden() {
-      if (ScrollY < 60) {
+      if (ScrollY < 1000) {
         return sethidden(true)
       } else {
         try {
