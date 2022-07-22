@@ -193,6 +193,21 @@ export default function Header() {
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
+                to={'/Dashboard'}
+                id={'/Dashboard'}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={'header-link'}
+                style={{
+                  paddingLeft: '1.5vw',
+                  color: '#ffffff',
+                  fontFamily: 'OpenDyslexic3',
+                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
+                }}
                 to={'/Dapp'}
                 id={'/Dapp'}
               >
@@ -208,10 +223,9 @@ export default function Header() {
                   fontFamily: 'OpenDyslexic3',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
-                to={'/Dashboard'}
-                id={'/Dashboard'}
+                to="./FAQ"
               >
-                Home
+                FAQ
               </NavLink>
             </li>
             <li>
@@ -245,20 +259,6 @@ export default function Header() {
               >
                 Team
               </Link>
-            </li>
-            <li>
-              <NavLink
-                className={'header-link'}
-                style={{
-                  paddingLeft: '1.5vw',
-                  color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
-                  fontSize: 'calc(3 * (0.3vw + 0.3vh))',
-                }}
-                to="./FAQ"
-              >
-                FAQ
-              </NavLink>
             </li>
             <li>
               <Link

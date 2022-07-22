@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { animated } from 'react-spring'
 import { useSpring } from 'react-spring/web'
 
-export default function PortfolioSection() {
+export default function OurVision() {
   const [hidden1, sethiddens] = useState(true)
   const ScrollY = useScrollPosition()
 
@@ -18,7 +18,7 @@ export default function PortfolioSection() {
 
   useEffect(() => {
     async function Ishiddens() {
-      if (ScrollY < 1800) {
+      if (ScrollY < 1500) {
         return sethiddens(true)
       } else {
         try {

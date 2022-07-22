@@ -184,7 +184,7 @@ const ClaimTransaction = () => {
       .then((result) => JSON.parse(result))
       .then((result) => setEthReserve1(result))
     FetchHolders().then((result) => setholders(result))
-  }, [account, showConnectAWallet, library.provider])
+  }, [])
 
   const Animeprice = Reserve0 / Reserve1
   const EthPrice = EthReserve0 / EthReserve1 / 1000000
@@ -197,15 +197,6 @@ const ClaimTransaction = () => {
   const reserve0value = Reserve0 / 1000000000000
   const Totalliquidity = reserve0value + ReserveBinusd
   const TotalLiquidity = Totalliquidity.toLocaleString()
-
-  console.log(EthReserve0)
-  console.log(EthReserve1)
-  console.log(Animeprice)
-  console.log(AnimePriceinUsd)
-  console.log(Marketcap)
-  console.log(ReserveBinusd)
-  console.log(reserve0value)
-  console.log(Totalliquidity)
 
   function formatMoney(n: any) {
     return '$ ' + (Math.round(n * 100) / 100).toLocaleString()
@@ -238,7 +229,7 @@ const ClaimTransaction = () => {
     } finally {
       setLoading(false)
     }
-  }, [showConnectAWallet, account, signer])
+  }, [])
 
   return (
     <div>

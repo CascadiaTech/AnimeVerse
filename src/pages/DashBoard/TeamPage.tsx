@@ -13,8 +13,8 @@ import { useSpring } from 'react-spring/web'
 
 export default function TeamSection() {
   const [hidden, sethidden] = useState(false)
-  const ScrollY = useScrollPosition()
-  const scrollY = useScrollPosition()
+  const ScrollY = useScrollPosition(60)
+  //const scrollY = useScrollPosition()
   const [loading, setLoading] = useState(false)
   //const { account } = useActiveWeb3React()
   const { account } = useWeb3React()
@@ -23,7 +23,7 @@ export default function TeamSection() {
   //const { addToken, success } = useAddTokenToMetamask(currencyToAdd)
 
   const props = useSpring({
-    config: { delay: 1000, duration: 1000 },
+    config: { duration: 1000 },
     to: { opacity: 1 },
     from: { opacity: 0 },
   })

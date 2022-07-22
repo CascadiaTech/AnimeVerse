@@ -6,8 +6,8 @@ import { TransparentCard } from '../../components/Card'
 import AboutSection from './AboutPage'
 import Footer from './Footer'
 import HowToBuyPage from './HowToBuy'
+import OurVision from './Mission'
 import Headernew from './Newheader'
-import PortfolioSection from './Portfolio'
 import { SocialScrollBar } from './ScrollBar'
 import TeamSection from './TeamPage'
 import AnimeTokenomics from './Tokenomics'
@@ -24,18 +24,14 @@ export default function DashBoardComponent() {
       <TransparentCard></TransparentCard>
       <SocialScrollBar></SocialScrollBar>
       <TransparentCard></TransparentCard>
-      <div id="AnimeTokenomics">
-        <AnimeTokenomics></AnimeTokenomics>
-      </div>
-      <TransparentCard></TransparentCard>
-      <div id="AboutSection">
-        <AboutSection></AboutSection>
-      </div>
+      <div id="AnimeTokenomics"></div>
+      <AnimeTokenomics></AnimeTokenomics>
+      <div id="AboutSection"></div>
+      <AboutSection></AboutSection>
       <TransparentCard></TransparentCard>
       <div>
-        <div id="PortfolioSection">
-          <PortfolioSection></PortfolioSection>
-        </div>
+        <div id="PortfolioSection"> </div>
+        <OurVision></OurVision>
         <TransparentCard></TransparentCard>
         <div id="TeamSection">
           <TeamSection></TeamSection>
