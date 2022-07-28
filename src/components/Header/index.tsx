@@ -190,7 +190,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
+                  textDecoration: 'none',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to={'/Dashboard'}
@@ -205,7 +205,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
+                  textDecoration: 'none',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to={'/Dapp'}
@@ -220,7 +220,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
+                  textDecoration: 'none',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="./FAQ"
@@ -234,7 +234,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
+                  textDecoration: 'none',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="AnimeTokenomics"
@@ -250,7 +250,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
+                  textDecoration: 'none',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="TeamSection"
@@ -266,7 +266,7 @@ export default function Header() {
                 style={{
                   paddingLeft: '1.5vw',
                   color: '#ffffff',
-                  fontFamily: 'OpenDyslexic3',
+                  textDecoration: 'none',
                   fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                 }}
                 to="Contact"

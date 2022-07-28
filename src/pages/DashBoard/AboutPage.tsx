@@ -74,47 +74,15 @@ const AboutSection = () => {
                             marginLeft: '20vw',
                             marginRight: '20vw',
                             marginBottom: '20px',
-                            color: '#ffcc00',
-                          }}
-                        >
-                          AnimeVerse, A unique token set out to make a difference in society by using anime & crypto in
-                          the DeFi space.
-                        </p>
-                        <p
-                          style={{
-                            maxWidth: '70vw',
-                            textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-                            fontSize: 'calc(3 * (0.4vw + 0.4vh))',
-                            textAlign: 'center',
-                            lineHeight: 1.4,
-                            justifyContent: 'center',
-                            fontFamily: 'OpenDyslexic3',
-                            marginLeft: '20vw',
-                            marginRight: '20vw',
-                            marginBottom: '20px',
                             color: '#000000',
                           }}
                         >
-                          $ANIME is a community-based ERC20 token combining anime with utility. The vision is simple, an
-                          ECO-SYSTEM designed to benefit society while generating passive income for investors.
-                        </p>
-                        <p
-                          style={{
-                            maxWidth: '70vw',
-                            textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-                            fontSize: 'calc(3 * (0.4vw + 0.4vh))',
-                            textAlign: 'center',
-                            lineHeight: 1.4,
-                            justifyContent: 'center',
-                            fontFamily: 'OpenDyslexic3',
-                            marginLeft: '20vw',
-                            marginRight: '20vw',
-                            marginBottom: '20px',
-                            color: '#000000',
-                          }}
-                        >
-                          Therefore, buy and sell tax is 9.8% each way with tokenomics that reward holders generously.
-                          (Over 20% of the total tax is rewarded back to holders)
+                          AnimeVerse ($ANIME) is an ERC20 token built on the Ethereum (ETH) blockchain. Therefore it is
+                          tradable via the token itself or by our unique original NFT collection. Our Eco-System is
+                          designed to be a crypto asset that rewards investors in ETH for simply holding $ANIME tokens.
+                          AnimeVerse will have a Dashboard that will enable investors to claim their ETH rewards, mint
+                          AnimeVerse NFTs and stake $ANIME tokens including NFTs for additional token rewards yielding
+                          passive income.
                         </p>
                         <p></p>
                         <div className={'flexbox-container'} style={{ justifyContent: 'center' }}>
@@ -184,25 +152,6 @@ const AboutSection = () => {
                             <h1 style={{ color: '#000000', fontSize: 'calc(3 * (0.3vw + 0.3vh))' }}>KYC & Audit</h1>
                           </div>
                         </div>
-                        <p
-                          style={{
-                            maxWidth: '70vw',
-                            textShadow: '0px 1px 0px rgba(0, 0, 0, 0.2)',
-                            fontSize: 'calc(3 * (0.4vw + 0.4vh))',
-                            textAlign: 'center',
-                            lineHeight: 1.4,
-                            justifyContent: 'center',
-                            fontFamily: 'OpenDyslexic3',
-                            marginLeft: '20vw',
-                            marginRight: '20vw',
-                            marginBottom: '20px',
-                            color: '#000000',
-                          }}
-                        >
-                          Using our utility, AnimeVerse will give back to society by means of fun and educational
-                          events. With the power of crypto and blockchain technology AnimeVerse will also introduce its
-                          P2E utility.
-                        </p>
                       </div>
                     </div>
                   </div>

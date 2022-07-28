@@ -179,7 +179,7 @@
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: calc(3 * (0.3vw + 0.3vh));
   font-family: 'OpenDyslexic3';
-  color: #ffffff;
+  color: #000000;
   margin-top: 15px;
   background-color: transparent;
   border-color: rgba(255, 153, 0, 0.979); 
@@ -218,6 +218,28 @@ border-radius: 10px;
 transform: scale(1.1);
 transition: 1s;
 }
+
+.RoadmapHoverCard {
+  padding: 0px 0px;
+  width: 22vw;
+  height: 45vh;
+  background-color: #000000be;
+  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+    max-width: 20vw;
+    min-width: 5vw;
+    min-height:5vh;
+    margin-right: 2vw;
+    justify-content: 'left';
+    margin-top: 20;
+    transition: 1s;
+  
+  }
+  .RoadmapHoverCard:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    }
+
 
   .HoverText {
   transition: 1s;
@@ -638,8 +660,20 @@ transition: 1s;
     border-radius: 15px;
    border: 1px solid;
    margin-top: 2vh;
+   color: '#000000';
     position: relative;
     background-color:transparent;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38);
+  }
+
+  .Roadmapcard {
+    min-height: 20vh;
+    max-height: 50vh;
+    min-width: 25vw;
+    max-width: 25vw;
+   border: 1px solid;
+   margin-top: 2vh;
+    background-color:rgba(255, 153, 0, 0.979); 
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38);
   }
 

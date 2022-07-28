@@ -4,7 +4,7 @@ import 'animate.css'
 //const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 import useScrollPosition from '@react-hook/window-scroll'
 import newLogo from 'assets/newLogo.png'
-import video from 'assets/video.mp4'
+//import video from 'assets/video.mp4'
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { animated } from 'react-spring'
@@ -80,15 +80,12 @@ const Headernew = () => {
   return (
     <>
       <div className={'mobileheader'}>
-        <video autoPlay loop muted playsInline className="video">
-          <source src={video} type="video/mp4" />
-        </video>{' '}
         <animated.div hidden={hidden} style={props} className={'animate__animated animate__bounce'}>
           <div className={'flexbox-vertical-container'}>
             <div>
-              <img className={'header-image'} src={newLogo} alt="header" style={{ maxWidth: '30vw' }}></img>
+              <img className={'header-image'} src={newLogo} alt="header" style={{ maxWidth: '40vw' }}></img>
             </div>
-            <div style={{ marginTop: '20px' }} className="flexbox-vertical-container-left">
+            <div style={{ marginTop: '3vh' }} className="flexbox-vertical-container-left">
               <div className="flexbox-container" style={{ justifyContent: 'center' }}>
                 <button
                   onClick={() =>
@@ -108,8 +105,8 @@ const Headernew = () => {
                       justifyContent: 'center',
                       fontSize: 'calc(3 * (0.3vw + 0.3vh))',
                       fontFamily: 'OpenDyslexic3',
-                      paddingBottom: '2vh',
-                      color: '#ffffff',
+                      paddingBottom: '1.5vh',
+                      color: '#000000',
                       transform: 'translate(0%, -10%)',
                       paddingLeft: '3%',
                       paddingRight: '3%',

@@ -1,14 +1,14 @@
 import '../DashBoard/styles.css'
 
+//import { checkNftOwnership, getNftsForOwner, initializeAlchemy, Network } from '@alch/alchemy-sdk'
 import { LoadingOutlined } from '@ant-design/icons'
 import { Contract } from '@ethersproject/contracts'
 import { getDefaultProvider, Web3Provider } from '@ethersproject/providers'
-import { formatEther, formatUnits } from '@ethersproject/units'
 import useScrollPosition from '@react-hook/window-scroll'
 import { useWeb3React } from '@web3-react/core'
 //import LinePic from 'assets/LinePic.png'
 import newLogo from 'assets/newLogo.png'
-import video from 'assets/video.mp4'
+//import video from 'assets/video.mp4'
 //import { Spin } from 'antd'
 //import { RowBetween } from 'components/Row'
 //import useActiveWeb3React from 'hooks/useActiveWeb3React'
@@ -16,11 +16,10 @@ import video from 'assets/video.mp4'
 import React, { useCallback, useEffect, useState } from 'react'
 
 import { abiObject } from './abi'
+import { NFTAbiObject } from './NFTAbi'
 import NFTMintSection from './NFTMint'
 import NFTStakingSection from './NftStaking'
-import { pairabiObject } from './pairabi'
 import Sidermenu from './Sidemenu/SidemenuComponent'
-import { USDCWETHpairabiObject } from './WETHUSDCPair'
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 
 const ClaimTransaction = () => {
@@ -31,116 +30,16 @@ const ClaimTransaction = () => {
   const showConnectAWallet = Boolean(!account)
   const context = useWeb3React()
   const { library } = context
-  const provider = new Web3Provider(library.provider)
-  const signer = provider.getSigner()
-  const [Reserve0, setReserve0] = useState(Number)
-  const [Reserve1, setReserve1] = useState(Number)
-  const [EthReserve0, setEthReserve0] = useState(Number)
-  const [EthReserve1, setEthReserve1] = useState(Number)
+  const [connected, setnotconnected] = useState(Boolean)
   const [holders, setholders] = useState(Number)
-
+  const [price, setprice] = useState(String)
+  const [nft, setnft] = useState(String)
+  const [unpaidearnings, setunpaidearnings] = useState(String)
+  const [userbalance, setuserbalance] = useState(String)
+  const [marketcap, setmarketcap] = useState(String)
+  const [liq, setliq] = useState(String)
   useEffect(() => {
-    async function FetchReserve0() {
-      if (showConnectAWallet) {
-        console.log({ message: 'Hold On there Partner, there seems to be an Account err!' })
-        return
-      }
-
-      try {
-        // setLoading(true)
-        //const provider = new Web3Provider(library.provider)
-        const provider = getDefaultProvider()
-        const abi = pairabiObject
-        const contractaddress = '0xFd362C758A756bAc42fce0Ea7E83f5bb72730c6E' // need uniswapv2pair
-        const contract = new Contract(contractaddress, abi, provider)
-        const Price = await contract.getReserves()
-        const Reserve0 = await Price._reserve0
-        return Reserve0
-      } catch (error) {
-        console.log(error)
-        //setLoading(false)
-      } finally {
-        // setLoading(false)
-      }
-    }
-    async function FetchReserve1() {
-      if (showConnectAWallet) {
-        console.log({ message: 'Hold On there Partner, there seems to be an Account err!' })
-        return
-      }
-
-      try {
-        // setLoading(true)
-        const provider = new Web3Provider(library.provider)
-        //const provider = getDefaultProvider()
-        const abi = pairabiObject
-        const contractaddress = '0xFd362C758A756bAc42fce0Ea7E83f5bb72730c6E' // need uniswapv2pair
-        const contract = new Contract(contractaddress, abi, provider)
-        const Price = await contract.getReserves()
-        const Reserve1 = await Price._reserve1
-        return Reserve1
-      } catch (error) {
-        console.log(error)
-        //setLoading(false)
-      } finally {
-        console.log(Reserve1)
-        // setLoading(false)
-      }
-    }
-    async function FetchEthReserve1() {
-      if (showConnectAWallet) {
-        console.log({ message: 'Hold On there Partner, there seems to be an Account err!' })
-        return
-      }
-
-      try {
-        // setLoading(true)
-        const provider = new Web3Provider(library.provider)
-        //const provider = getDefaultProvider()
-        const abi = USDCWETHpairabiObject
-        const contractaddress = '0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc' // need uniswapv2pair
-        const contract = new Contract(contractaddress, abi, provider)
-        const Price = await contract.getReserves()
-        const EthReserve1 = await Price._reserve1
-        return EthReserve1
-      } catch (error) {
-        console.log(error)
-        //setLoading(false)
-      } finally {
-        console.log(Reserve1)
-        // setLoading(false)
-      }
-    }
-    async function FetchEthReserve0() {
-      if (showConnectAWallet) {
-        console.log({ message: 'Hold On there Partner, there seems to be an Account err!' })
-        return
-      }
-
-      try {
-        // setLoading(true)
-        const provider = new Web3Provider(library.provider)
-        //const provider = getDefaultProvider()
-        const abi = USDCWETHpairabiObject
-        const contractaddress = '0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc' // need uniswapv2pair
-        const contract = new Contract(contractaddress, abi, provider)
-        const Price = await contract.getReserves()
-        const EthReserve0 = await Price._reserve0
-        return EthReserve0
-      } catch (error) {
-        console.log(error)
-        //setLoading(false)
-      } finally {
-        // setLoading(false)
-      }
-    }
-
     async function FetchHolders() {
-      if (showConnectAWallet) {
-        console.log({ message: 'Hold On there Partner, there seems to be an Account err!' })
-        return
-      }
-
       try {
         setLoading(true)
         const response = await fetch(
@@ -157,46 +56,133 @@ const ClaimTransaction = () => {
         setLoading(false)
       }
     }
-    //const response = await fetch(
-    //  'https://api.dev.dex.guru/v1/chain/1/tokens/0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67/market/?api-key=0VQUJ1cmVs0-n0pj_OhrzjCPO1NDKDGzpAuh7OTQZuI'
-    //)
 
-    FetchReserve1()
-      .then((result) => formatUnits(result))
-      .then((result) => JSON.stringify(result))
-      .then((result) => JSON.parse(result))
-      .then((result) => setReserve1(result))
+    async function FetchDexGuruPrice() {
+      try {
+        setLoading(true)
+        const response = await fetch(
+          'https://api.dev.dex.guru/v1/chain/1/tokens/0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67/market/?api-key=0VQUJ1cmVs0-n0pj_OhrzjCPO1NDKDGzpAuh7OTQZuI'
+        )
+        const data = await response.json()
+        console.log(data)
+        const returnprice = await data.price_usd
+        const stringprice = JSON.stringify(returnprice)
+        return stringprice
+      } catch (error) {
+        console.log(error)
+        setLoading(false)
+      } finally {
+        setLoading(false)
+      }
+    }
+    async function FetchDexGuruLiq() {
+      try {
+        setLoading(true)
+        const response = await fetch(
+          'https://api.dev.dex.guru/v1/chain/1/tokens/0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67/market/?api-key=0VQUJ1cmVs0-n0pj_OhrzjCPO1NDKDGzpAuh7OTQZuI'
+        )
+        const data = await response.json()
+        const returnliq = await data.liquidity_usd
+        return returnliq
+      } catch (error) {
+        console.log(error)
+        setLoading(false)
+      } finally {
+        setLoading(false)
+      }
+    }
 
-    FetchReserve0()
-      .then((result) => formatUnits(result))
-      .then((result) => JSON.stringify(result))
-      .then((result) => JSON.parse(result))
-      .then((result) => setReserve0(result))
+    async function Marketcap() {
+      try {
+        setLoading(true)
+        const AnimeMarketcap = (await Number(price)) * 1000000000000
+        const displaymarketcap = JSON.stringify(AnimeMarketcap)
+        return setmarketcap(displaymarketcap)
+      } catch (error) {
+        console.log(error)
+        setLoading(false)
+      } finally {
+        setLoading(false)
+      }
+    }
 
-    FetchEthReserve0()
-      .then((result) => formatEther(result))
-      .then((result) => JSON.stringify(result))
-      .then((result) => JSON.parse(result))
-      .then((result) => setEthReserve0(result))
-    FetchEthReserve1()
-      .then((result) => formatUnits(result))
-      .then((result) => JSON.stringify(result))
-      .then((result) => JSON.parse(result))
-      .then((result) => setEthReserve1(result))
+    FetchDexGuruPrice()
+      .then((result) => Number(result).toFixed(12))
+      .then((result) => setprice(result))
+    FetchDexGuruLiq()
+      .then((result) => Number(result).toFixed(2))
+      .then((result) => setliq(result))
+    Marketcap()
     FetchHolders().then((result) => setholders(result))
+  }, [price, holders])
+
+  useEffect(() => {
+    async function FetchNFT() {
+      if (showConnectAWallet) {
+        setnotconnected(true)
+        return
+      }
+
+      try {
+        //setLoading(true)
+        const provider = getDefaultProvider()
+        const abi = NFTAbiObject
+        const contractaddress = '0xC4deaEbD15E3B6956cc7EF48d2AB934CA3CaB4D2'
+        const contract = new Contract(contractaddress, abi, provider)
+        const UserTokenBalance = await contract.balanceOf(account)
+        const FinalResult = await UserTokenBalance.toString()
+        return FinalResult
+      } catch (error) {
+        console.log(error)
+      } finally {
+      }
+    }
+    async function FetchBalance() {
+      if (showConnectAWallet) {
+        setnotconnected(true)
+        return
+      }
+
+      try {
+        //setLoading(true)
+        const provider = getDefaultProvider()
+        const abi = abiObject
+        const contractaddress = '0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67'
+        const contract = new Contract(contractaddress, abi, provider)
+        const UserTokenBalance = await contract.balanceOf(account)
+        const FinalResult = await UserTokenBalance.toString()
+        return FinalResult
+      } catch (error) {
+        console.log(error)
+      } finally {
+      }
+    }
+    async function FetchUnpaidBalance() {
+      if (showConnectAWallet) {
+        setnotconnected(true)
+        return
+      }
+
+      try {
+        //setLoading(true)
+        const provider = getDefaultProvider()
+        const abi = abiObject
+        const contractaddress = '0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67'
+        const contract = new Contract(contractaddress, abi, provider)
+        const UserUnpaidBalance = await contract.getUserUnpaidEarnings(account)
+        const FinalResult = await UserUnpaidBalance.toString()
+        console.log(FinalResult)
+        return FinalResult
+      } catch (error) {
+        console.log(error)
+      } finally {
+      }
+    }
+
+    FetchBalance().then((result) => setuserbalance(result))
+    FetchNFT().then((result) => setnft(result))
+    FetchUnpaidBalance().then((result) => setunpaidearnings(result))
   }, [])
-
-  const Animeprice = Reserve0 / Reserve1
-  const EthPrice = EthReserve0 / EthReserve1 / 1000000
-  console.log(EthPrice)
-  const AnimePriceinUsd = Animeprice / 1000000000000
-  const Marketcap = AnimePriceinUsd * 1000000000000 // essentially jpegusd price divided by total supply
-  //const MarketCap = Marketcap.toLocaleString()
-
-  const ReserveBinusd = AnimePriceinUsd * Reserve1
-  const reserve0value = Reserve0 / 1000000000000
-  const Totalliquidity = reserve0value + ReserveBinusd
-  const TotalLiquidity = Totalliquidity.toLocaleString()
 
   function formatMoney(n: any) {
     return '$ ' + (Math.round(n * 100) / 100).toLocaleString()
@@ -204,9 +190,7 @@ const ClaimTransaction = () => {
   function numberWithCommas(num: any) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   }
-  const n = numberWithCommas(Totalliquidity)
-  const MarketCap = formatMoney(Marketcap)
-
+  //const n = numberWithCommas(Totalliquidity)
   const handleClaim = useCallback(async () => {
     if (showConnectAWallet) {
       console.log({ message: 'Hold On there Partner, there seems to be an Account err!' })
@@ -216,6 +200,8 @@ const ClaimTransaction = () => {
     try {
       setLoading(true)
       const abi = abiObject
+      const signingprovider = new Web3Provider(library.provider)
+      const signer = signingprovider.getSigner()
       const contractaddress = '0x5a8F92addfe1Cd48B51E1FA926144C0918DBAb67' // "clienttokenaddress"
       const contract = new Contract(contractaddress, abi, signer)
       const ClaimBalance = await contract.giveMeWelfarePlease() //.claim(account,amount)
@@ -234,10 +220,6 @@ const ClaimTransaction = () => {
   return (
     <div>
       <Sidermenu></Sidermenu>
-      <video autoPlay loop muted playsInline className="video">
-        <source src={video} type="video/mp4" />
-      </video>
-
       <img
         className={'dapp-header-image'}
         src={newLogo}
@@ -245,8 +227,8 @@ const ClaimTransaction = () => {
         style={{
           width: 'auto',
           height: 'auto',
-          maxWidth: '30vw',
-          maxHeight: '30vw',
+          maxWidth: '45vw',
+          maxHeight: '45vw',
           padding: '0%',
           float: 'right',
           paddingRight: '0%',
@@ -258,30 +240,21 @@ const ClaimTransaction = () => {
             <div className={'Dapp-card'}>
               <div>
                 {' '}
-                <p style={{ textAlign: 'center', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
-                  Company Statistics
-                </p>{' '}
+                <p style={{ textAlign: 'center' }}>Company Statistics</p>{' '}
               </div>{' '}
               <div className={'flexbox-vertical-container'}>
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
-                    Current Price
-                  </p>
-                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{AnimePriceinUsd}</p>
+                  <p style={{ paddingLeft: '2vw' }}>Current Price</p>
+                  <p style={{ paddingRight: '2vw' }}> {price} </p>
                 </div>
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
-                    Market Capitalization
-                  </p>
-                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{MarketCap}</p>
+                  <p style={{ paddingLeft: '2vw' }}>Market Capitalization</p>
+                  <p style={{ paddingRight: '2vw' }}>{formatMoney(Number(marketcap))}</p>
                 </div>
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
-                    Holders
-                  </p>
+                  <p style={{ paddingLeft: '2vw' }}>Holders</p>
                   <p
                     style={{
-                      color: 'rgba(255, 153, 0, 0.979)',
                       alignSelf: 'right',
                       textAlign: 'right',
                       paddingRight: '2vw',
@@ -291,40 +264,31 @@ const ClaimTransaction = () => {
                   </p>
                 </div>
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
-                    Total Liquidity
-                  </p>
-                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{TotalLiquidity}</p>
+                  <p style={{ paddingLeft: '2vw' }}>Total Liquidity</p>
+                  <p style={{ paddingRight: '2vw' }}> {formatMoney(Number(liq))}</p>
                 </div>
               </div>
             </div>
             <div className={'Dapp-card'}>
               <div className={'flexbox-vertical-container'}>
-                <p style={{ textAlign: 'center', color: 'rgba(255, 153, 0, 0.979)', fontFamily: 'OpenDyslexic3' }}>
-                  {' '}
-                  User Stats
-                </p>{' '}
+                <p style={{ textAlign: 'center' }}> User Stats</p>{' '}
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', color: 'rgba(255, 153, 0, 0.979)' }}>User Anime Token Balance</p>
-                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', paddingRight: '2vw' }}>{MarketCap}</p>
+                  <p style={{ paddingLeft: '2vw' }}>User Anime Token Balance</p>
+                  <p style={{ paddingRight: '2vw' }}>{userbalance}</p>
                 </div>
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', paddingRight: '2vw', color: 'rgba(255, 153, 0, 0.979)' }}>
-                    Your NFT Balance
-                  </p>
-                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', justifySelf: 'right', paddingRight: '2vw' }}>
-                    1 Trillion
-                  </p>
+                  <p style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>Your NFT Balance</p>
+                  <p style={{ justifySelf: 'right', paddingRight: '2vw' }}>{nft}</p>
                 </div>
                 <div className={'flexbox-container'} style={{ justifyContent: 'space-between' }}>
-                  <p style={{ paddingLeft: '2vw', paddingRight: '2vw', color: 'rgba(255, 153, 0, 0.979)' }}>
-                    Your Pending Reflections
-                  </p>
-                  <p style={{ color: 'rgba(255, 153, 0, 0.979)', justifySelf: 'right', paddingRight: '2vw' }}>
-                    1 Trillion
-                  </p>
+                  <p style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>Your Pending Reflections</p>
+                  <p style={{ justifySelf: 'right', paddingRight: '2vw' }}>{unpaidearnings}</p>
                 </div>
-                <button className={'GitButton'} onClick={() => handleClaim()} style={{ width: '20vw' }}>
+                <button
+                  className={'GitButton'}
+                  onClick={() => handleClaim()}
+                  style={{ width: '23vw', color: '#000000' }}
+                >
                   {' '}
                   Claim Reflections{' '}
                 </button>

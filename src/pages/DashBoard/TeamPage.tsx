@@ -54,10 +54,9 @@ export default function TeamSection() {
                 textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 fontSize: 'calc(3 * (0.75vw + 0.75vh))',
                 textAlign: 'center',
-                color: '#ffffff',
+                color: '#000000',
                 lineHeight: 1.4,
                 justifyContent: 'center',
-                fontFamily: 'OpenDyslexic3',
               }}
             >
               Leadership Team
@@ -69,11 +68,10 @@ export default function TeamSection() {
                 textAlign: 'center',
                 lineHeight: 1.4,
                 justifyContent: 'center',
-                fontFamily: 'OpenDyslexic3',
                 marginBottom: '20px',
                 marginLeft: '10vw',
                 marginRight: '10vw',
-                color: '#ffaa00',
+                color: '#000000',
               }}
             >
               The Leadership Team is made up of three individuals Mr. Moon, HR and Momo. All three have followed the KYC
@@ -138,7 +136,6 @@ export default function TeamSection() {
                 justifyContent: 'center',
                 marginLeft: '10vw',
                 marginRight: '10vw',
-                fontFamily: 'OpenDyslexic3',
                 marginBottom: '20px',
                 color: '#000000',
               }}
@@ -159,7 +156,6 @@ export default function TeamSection() {
                 justifyContent: 'center',
                 marginLeft: '10vw',
                 marginRight: '10vw',
-                fontFamily: 'OpenDyslexic3',
                 marginBottom: '20px',
                 color: '#000000',
               }}
@@ -174,11 +170,10 @@ export default function TeamSection() {
                 textAlign: 'center',
                 lineHeight: 1.4,
                 justifyContent: 'center',
-                fontFamily: 'OpenDyslexic3',
                 marginBottom: '20px',
                 marginLeft: '10vw',
                 marginRight: '10vw',
-                color: '#ffaa00',
+                color: '#000000',
               }}
             >
               The $ANIME team is fully dedicated into making AnimeVerse a GLOBAL BRAND that is recognised in

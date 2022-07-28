@@ -55,7 +55,6 @@ export default function AnimeTokenomics() {
                 fontSize: 'calc(3 * (0.5vw + 0.5vh))',
                 textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
                 textAlign: 'center',
-                fontFamily: 'OpenDyslexic3',
                 maxWidth: '100vw',
                 color: '#000000',
               }}
@@ -71,21 +70,17 @@ export default function AnimeTokenomics() {
                 textAlign: 'center',
                 maxWidth: '100vw',
                 color: '#000000',
-                fontFamily: 'OpenDyslexic3',
               }}
             >
               {' '}
-              Buy Tax / Sell Tax: 9.8%
+              Buy Tax / Sell Tax: 6%
             </p>
           </div>
         </div>
-        <div
-          className={'flexbox-container'}
-          style={{ maxWidth: '100vw', width: '100vw', fontFamily: 'OpenDyslexic3', justifyContent: 'center' }}
-        >
+        <div className={'flexbox-container'} style={{ maxWidth: '100vw', width: '100vw', justifyContent: 'center' }}>
           <div id={'content'} style={{ marginLeft: '2vw' }}>
             <div className={'flexbox-vertical-container'}>
-              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3', color: '#000000' }}>
+              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', color: '#000000' }}>
                 {' '}
                 Development and Marketing 2%{' '}
               </h1>
@@ -94,7 +89,6 @@ export default function AnimeTokenomics() {
                   fontSize: 'calc(3 * (0.22vw + 0.22vh))',
                   width: '20vw',
                   paddingLeft: '1vw',
-                  fontFamily: 'OpenDyslexic3',
                   lineHeight: 1.4,
                   color: '#000000',
                 }}
@@ -105,10 +99,7 @@ export default function AnimeTokenomics() {
           </div>
           <div id={'content'} style={{ marginLeft: '2vw' }}>
             <div className={'flexbox-vertical-container'}>
-              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', fontFamily: 'OpenDyslexic3', color: '#000000' }}>
-                {' '}
-                ETH Reflection 3%{' '}
-              </h1>
+              <h1 style={{ fontSize: 'calc(3 * (0.4vw + 0.4vh))', color: '#000000' }}> ETH Reflection 3% </h1>
               <p
                 style={{
                   fontSize: 'calc(3 * (0.22vw + 0.22vh))',

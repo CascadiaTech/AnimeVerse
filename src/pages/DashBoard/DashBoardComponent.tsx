@@ -8,6 +8,7 @@ import Footer from './Footer'
 import HowToBuyPage from './HowToBuy'
 import OurVision from './Mission'
 import Headernew from './Newheader'
+import RoadmapSection from './Roadmap'
 import { SocialScrollBar } from './ScrollBar'
 import TeamSection from './TeamPage'
 import AnimeTokenomics from './Tokenomics'
@@ -21,7 +22,6 @@ export default function DashBoardComponent() {
     <>
       <Headernew></Headernew>
       <HowToBuyPage></HowToBuyPage>
-      <TransparentCard></TransparentCard>
       <SocialScrollBar></SocialScrollBar>
       <TransparentCard></TransparentCard>
       <div id="AnimeTokenomics"></div>
@@ -33,6 +33,7 @@ export default function DashBoardComponent() {
         <div id="PortfolioSection"> </div>
         <OurVision></OurVision>
         <TransparentCard></TransparentCard>
+        <RoadmapSection></RoadmapSection>
         <div id="TeamSection">
           <TeamSection></TeamSection>
         </div>

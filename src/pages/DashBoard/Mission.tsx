@@ -18,7 +18,7 @@ export default function OurVision() {
 
   useEffect(() => {
     async function Ishiddens() {
-      if (ScrollY < 1500) {
+      if (ScrollY < 800) {
         return sethiddens(true)
       } else {
         try {
@@ -42,7 +42,6 @@ export default function OurVision() {
               textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
               textAlign: 'center',
               color: '#000000',
-              fontFamily: 'OpenDyslexic3',
             }}
           >
             Our Vision
@@ -54,7 +53,6 @@ export default function OurVision() {
               textAlign: 'center',
               maxWidth: '100vw',
               color: '#000000',
-              fontFamily: 'OpenDyslexic3',
               paddingBottom: '5vh',
               marginLeft: '10vw',
               marginRight: '10vw',
@@ -76,7 +74,6 @@ export default function OurVision() {
               maxWidth: '100vw',
               color: '000000',
               paddingBottom: '5vh',
-              fontFamily: 'OpenDyslexic3',
               marginLeft: '10vw',
               marginRight: '10vw',
               textShadow: '0px 2px 0px rgba(0, 0, 0, 0.4)',
